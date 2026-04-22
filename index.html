@@ -38,46 +38,34 @@
         .container { max-width: 1300px; margin: 0 auto; padding: 0 6%; }
 
         /* --- Header --- */
-        header {
-            background: rgba(3, 3, 5, 0.85);
-            backdrop-filter: blur(20px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-        }
+<header>
+    <div class="container nav-container">
+        <a href="#inicio">
+            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO Digital 3F" class="logo-img">
+        </a>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Quem Somos</a>
+            <a href="#metodologia">Metodologia</a>
+            <a href="#faq">Dúvidas</a>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="btn-primary">Consultoria Gratuita</a>
+    </div>
+</header>
 
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo-img { height: 50px; transition: var(--transition); }
-        .logo-img:hover { transform: scale(1.05); }
+/* Adicione classe highlight */
+.highlight { 
+    background: linear-gradient(135deg, var(--tajo-cyan), var(--tajo-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
         
-        nav { display: flex; gap: 30px; }
-        nav a { text-decoration: none; color: var(--text-main); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: var(--transition); letter-spacing: 1px; }
-        nav a:hover { color: var(--tajo-cyan); }
-
-        .btn-primary {
-            background: var(--tajo-blue);
-            color: #FFFFFF;
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: var(--transition);
-            border: 1px solid var(--tajo-blue);
-            font-size: 0.8rem;
-        }
-
-        .btn-primary:hover {
-            background: transparent;
-            color: var(--tajo-cyan);
-            border-color: var(--tajo-cyan);
-            box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);
-        }
-
         /* --- Hero --- */
         section { padding: 120px 0; }
         .hero { 
