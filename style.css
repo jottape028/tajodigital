@@ -1,15 +1,13 @@
-/* --- VARIÁVEIS DO SISTEMA DE DESIGN --- */
+/* --- CONFIGURAÇÕES DE DESIGN SYSTEM --- */
 :root {
-    --bg-deep-black: #030305;
+    --bg-deep: #030305;
     --bg-card: #0A0A0E;
-    --bg-card-hover: #12121A;
-    --tajo-blue: #0056D2;
     --tajo-cyan: #0088FF;
+    --tajo-blue: #0056D2;
     --text-main: #E2E8F0;
     --text-muted: #94A3B8;
     --border-color: rgba(255, 255, 255, 0.08);
-    --transition-apple: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    --glass: rgba(10, 10, 14, 0.8);
+    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --- RESET & BASE --- */
@@ -21,25 +19,14 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background-color: var(--bg-deep-black);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-deep);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
-.container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 6%;
-}
-
-/* --- ANIMAÇÃO DE ABERTURA (ESTILO BOOT IPHONE) --- */
+/* --- LOADER IPHONE STYLE --- */
 .iphone-loader {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -48,51 +35,21 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease;
+    transition: opacity 0.8s ease;
 }
 
-.apple-logo-wrap {
-    width: 120px;
-    text-align: center;
-}
+.apple-logo-wrap { width: 100px; text-align: center; }
+.loader-logo { width: 50px; margin-bottom: 20px; filter: brightness(10); }
+.progress-bar-container { height: 2px; background: #333; border-radius: 10px; overflow: hidden; }
+.progress-bar { width: 0%; height: 100%; background: #fff; animation: load 2.5s forwards; }
 
-.loader-logo {
-    width: 60px;
-    filter: brightness(0) invert(1); /* Logo branco puro no boot */
-    margin-bottom: 30px;
-    animation: pulseLogo 2s infinite ease-in-out;
-}
+@keyframes load { to { width: 100%; } }
 
-.progress-bar-container {
-    width: 100%;
-    height: 3px;
-    background: #333;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    width: 0%;
-    height: 100%;
-    background: #fff;
-    animation: loadingProgress 2.5s forwards cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-@keyframes loadingProgress {
-    0% { width: 0%; }
-    100% { width: 100%; }
-}
-
-@keyframes pulseLogo {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(0.95); opacity: 0.8; }
-}
-
-/* --- HEADER & NAVEGAÇÃO --- */
+/* --- HEADER & NAV --- */
 header {
-    background: var(--glass);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    background: rgba(3, 3, 5, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
     top: 0;
@@ -101,203 +58,153 @@ header {
     padding: 15px 0;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo-img { height: 35px; }
 
-.logo-img { height: 40px; transition: transform 0.3s ease; }
-.logo-img:hover { transform: scale(1.05); }
-
-nav { display: flex; gap: 30px; }
 nav a {
-    text-decoration: none;
     color: var(--text-muted);
-    font-size: 0.75rem;
-    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0 15px;
     text-transform: uppercase;
-    transition: var(--transition-apple);
-    letter-spacing: 1.5px;
+    transition: var(--transition);
 }
+
 nav a:hover { color: var(--tajo-cyan); }
 
-/* --- BOTÕES PREMIUM --- */
+/* --- BOTÕES --- */
 .btn-primary {
     background: linear-gradient(135deg, var(--tajo-blue), var(--tajo-cyan));
-    color: #FFFFFF;
-    padding: 14px 28px;
-    border-radius: 8px; /* Estilo Apple moderno */
-    font-weight: 800;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
     text-decoration: none;
-    text-transform: uppercase;
-    transition: var(--transition-apple);
-    font-size: 0.75rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: var(--transition);
     border: none;
-    cursor: pointer;
-    display: inline-block;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 136, 255, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 136, 255, 0.4);
 }
 
 /* --- HERO SECTION --- */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: radial-gradient(circle at 80% 20%, rgba(0, 86, 210, 0.1), transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(0, 136, 255, 0.05), transparent 50%);
-}
-
-.hero h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 25px;
-    letter-spacing: -2px;
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at top right, rgba(0, 86, 210, 0.15), transparent);
 }
 
 .highlight {
-    background: linear-gradient(135deg, #FFF 40%, var(--tajo-cyan) 100%);
+    background: linear-gradient(90deg, #fff, var(--tajo-cyan));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* --- PORTFÓLIO & EFEITO DE FOCO (BLUR) --- */
-.portfolio-grid:hover .portfolio-card {
-    filter: blur(5px);
-    opacity: 0.4;
-    transform: scale(0.96);
-}
+/* --- SEÇÃO QUEM SOMOS (EFEITO INTERATIVO) --- */
+.about-section { padding: 100px 0; }
 
-.portfolio-grid .portfolio-card:hover {
-    filter: blur(0);
-    opacity: 1;
-    transform: scale(1.03);
-    border-color: var(--tajo-cyan);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
-
-.portfolio-card {
-    background: var(--bg-card);
-    padding: 40px;
-    border-radius: 24px;
-    border: 1px solid var(--border-color);
-    transition: var(--transition-apple);
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-card ul { list-style: none; margin: 25px 0; }
-.portfolio-card ul li {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.portfolio-card ul li::before {
-    content: '→';
-    color: var(--tajo-cyan);
-    font-weight: bold;
-}
-
-.badge {
-    background: rgba(0, 136, 255, 0.1);
-    color: var(--tajo-cyan);
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-/* --- QUEM SOMOS (GRID) --- */
-.about-section { padding: 120px 0; }
-.about-grid-main {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.mv-card {
-    background: rgba(255,255,255,0.02);
-    padding: 25px;
-    border-radius: 18px;
-    border: 1px solid var(--border-color);
-    margin-top: 20px;
+/* Container dos itens para controle do foco */
+.values-container:hover .value-item {
+    filter: blur(4px);
+    opacity: 0.3;
+    transform: scale(0.95);
 }
 
 .value-item {
     display: flex;
     gap: 20px;
-    margin-bottom: 35px;
-    align-items: flex-start;
+    padding: 25px;
+    border-radius: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+/* Quando passa o mouse no item específico */
+.values-container .value-item:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.1) translateY(-5px); /* Pulsa pra frente */
+    border-color: var(--tajo-cyan);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
 
 .value-number {
     font-size: 1.5rem;
-    font-weight: 900;
+    font-weight: 800;
     color: var(--tajo-cyan);
-    opacity: 0.5;
 }
 
-/* --- DEPOIMENTOS --- */
-.testimonial-card {
+/* --- PORTFÓLIO CARDS --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
     background: var(--bg-card);
-    padding: 35px;
-    border-radius: 24px;
+    padding: 30px;
+    border-radius: 25px;
     border: 1px solid var(--border-color);
-    transition: var(--transition-apple);
+    transition: var(--transition);
 }
 
-.testimonial-card:hover {
-    background: var(--bg-card-hover);
+.portfolio-card:hover {
     transform: translateY(-10px);
-}
-
-.author-avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: var(--tajo-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 1.2rem;
-}
-
-/* --- FAQ SISTEMA --- */
-.faq-item {
-    transition: var(--transition-apple);
-}
-
-.faq-item.active {
-    background: var(--bg-card-hover);
     border-color: var(--tajo-cyan);
 }
 
-.faq-item h5 span {
-    transition: transform 0.3s ease;
-    color: var(--tajo-cyan);
+/* --- DEPOIMENTOS (DESFOQUE DE FUNDO - GLASSMORPHISM) --- */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
 }
 
-.faq-item.active h5 span { transform: rotate(45deg); }
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.03); /* Fundo semi-transparente */
+    backdrop-filter: blur(15px); /* Desfoca o que está atrás */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--border-color);
+    padding: 35px;
+    border-radius: 30px;
+    transition: var(--transition);
+}
 
-/* --- WHATSAPP FLOATING --- */
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-10px);
+}
+
+.author-info { display: flex; align-items: center; gap: 15px; margin-top: 25px; }
+.author-avatar {
+    width: 45px; height: 45px; background: var(--tajo-blue);
+    border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-weight: 900;
+}
+
+/* --- FAQ --- */
+.faq-item {
+    transition: var(--transition);
+}
+.faq-item.active { border-color: var(--tajo-cyan); background: rgba(0, 136, 255, 0.05); }
+
+/* --- WHATSAPP FLOATING (PULSANDO) --- */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
     right: 30px;
     background: #25D366;
     color: white;
-    padding: 12px 25px;
+    padding: 15px 25px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
@@ -305,23 +212,33 @@ nav a:hover { color: var(--tajo-cyan); }
     align-items: center;
     gap: 10px;
     z-index: 1000;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-    animation: floatPulse 3s infinite;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    animation: pulseWhatsapp 2s infinite; /* Chamada da animação */
 }
 
-@keyframes floatPulse {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+@keyframes pulseWhatsapp {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
+
+/* --- FOOTER --- */
+footer img { filter: grayscale(1) opacity(0.5); transition: 0.3s; }
+footer img:hover { filter: grayscale(0) opacity(1); }
 
 /* --- RESPONSIVIDADE --- */
-@media (max-width: 992px) {
-    .about-grid-main { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
     nav { display: none; }
-}
-
-@media (max-width: 480px) {
-    .hero h1 { font-size: 2.8rem; }
-    .portfolio-card { padding: 25px; }
+    .hero h1 { font-size: 2.5rem; }
+    .about-grid-main { grid-template-columns: 1fr; }
+    .values-container .value-item:hover { transform: scale(1.05); }
 }
