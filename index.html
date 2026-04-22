@@ -38,36 +38,70 @@
         .container { max-width: 1300px; margin: 0 auto; padding: 0 6%; }
 
         /* --- Header --- */
-<header>
-    <div class="container nav-container">
-        <a href="#inicio">
-            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO Digital 3F" class="logo-img">
-        </a>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Quem Somos</a>
-            <a href="#metodologia">Metodologia</a>
-            <a href="#faq">Dúvidas</a>
-        </nav>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="btn-primary">Consultoria Gratuita</a>
-    </div>
-</header>
+        header {
+            background: rgba(3, 3, 5, 0.85);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+        }
 
-/* Adicione classe highlight */
-.highlight { 
-    background: linear-gradient(135deg, var(--tajo-cyan), var(--tajo-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-img { height: 50px; transition: var(--transition); }
+        .logo-img:hover { transform: scale(1.05); }
         
+        nav { display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: var(--text-main); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: var(--transition); letter-spacing: 1px; }
+        nav a:hover { color: var(--tajo-cyan); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--tajo-blue);
+            color: #FFFFFF;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: 1px solid var(--tajo-blue);
+            font-size: 0.8rem;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--tajo-cyan);
+            border-color: var(--tajo-cyan);
+            box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);
+        }
+
+        .highlight { 
+            background: linear-gradient(135deg, var(--tajo-cyan), var(--tajo-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         /* --- Hero --- */
-        section { padding: 120px 0; }
+        section { padding: 120px 0 80px; }
         .hero { 
             min-height: 100vh; 
             display: flex; 
@@ -86,6 +120,91 @@
         }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; }
         .stat-item h3 { font-size: 2.8rem; color: var(--tajo-cyan); margin-bottom: 8px; }
+
+        /* --- About Section --- */
+        .about-grid, .pillars-grid {
+            display: grid;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (min-width: 769px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+                margin-top: 80px;
+            }
+            .pillars-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- Testimonials --- */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--tajo-cyan);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 136, 255, 0.15);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 4rem;
+            color: var(--tajo-cyan);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            padding-left: 10px;
+            color: var(--text-main);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--tajo-blue), var(--tajo-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.1rem;
+        }
 
         /* --- Pillars --- */
         .pillar-card {
@@ -147,22 +266,64 @@
         .faq-item.active { border-color: var(--tajo-cyan); background: var(--bg-card); }
         .faq-item.active .faq-answer { padding-bottom: 25px; max-height: 300px; }
 
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
         footer { background: #000; padding: 100px 0 30px; border-top: 1px solid var(--border-color); }
 
+        /* --- Mobile Menu --- */
         @media (max-width: 768px) {
+            .hamburger { display: flex; }
             nav, .nav-container .btn-primary { display: none; }
-            .hero { text-align: center; }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(3, 3, 5, 0.98);
+                flex-direction: column;
+                padding: 20px 6%;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+                z-index: 1000;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav a {
+                padding: 15px 0;
+                font-size: 1.1rem;
+            }
+            
+            .hero { text-align: center; padding-top: 100px; }
             .hero p { margin: 0 auto 40px; }
-            .whatsapp-float { padding: 12px; width: 60px; height: 60px; justify-content: center; border-radius: 50%; }
+            .whatsapp-float { 
+                padding: 12px; 
+                width: 60px; 
+                height: 60px; 
+                justify-content: center; 
+                border-radius: 50%; 
+            }
             .whatsapp-float span { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="whatsapp-float" target="_blank">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-2.32 0-4.591 1.142-4.591 3.276 0 1.274.779 2.13 1.342 2.528l.044.029l-.688 2.512l2.671-.68l.059.038c.373.238 1.011.534 1.563.534c2.045 0 4.192-1.239 4.192-3.418c0-2.179-2.147-4.819-4.592-4.819zm-3.377 22.35l-5.321-1.391l1.42-5.185C3.047 19.969 2 17.568 2 15.016C2 9.485 6.485 5 12 5s10 4.485 10 10.016c0 5.531-4.485 10.016-10 10.016c-2.123 0-4.135-.669-5.81-1.815l.464 1.305z"/></svg>
-        <span>Falar com um especialista</span>
+    <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="whatsapp-float" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-2.32 0-4.591 1.142-4.591 3.276 0 1.274.779 2.13 1.342 2.528l.044.029l-.688 2.512l2.671-.68l.059.038c.373.238 1.011.534 1.563.534c2.045 0 4.192-1.239 4.192-3.418c0-2.179-2.147-4.819-4.592-4.819zm-3.377 22.35l-5.321-1.391l1.42-5.185C3.047 19.969 2 17.568 2 15.016C2 9.485 6.485 5 12 5s10 4.485 10 10.016c0 5.531-4.485 10.016-10 10.016c-2.123 0-4.135-.669-5.81-1.815l.464 1.305z"/>
+        </svg>
+        <span>Falar com especialista</span>
     </a>
 
     <header>
@@ -173,10 +334,16 @@
             <nav>
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Quem Somos</a>
+                <a href="#depoimentos">Depoimentos</a>
                 <a href="#metodologia">Metodologia</a>
                 <a href="#faq">Dúvidas</a>
             </nav>
-            <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="btn-primary">Consultoria Gratuita</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="btn-primary" target="_blank" rel="noopener">Consultoria Gratuita</a>
         </div>
     </header>
 
@@ -184,7 +351,7 @@
         <div class="container" data-aos="fade-up">
             <h1>Sua Empresa com Presença Digital de <span class="highlight">Elite</span>.</h1>
             <p>Mais que um site, entregamos uma máquina de vendas. Unimos design de alto padrão, tecnologia de ponta e estratégias de conversão para posicionar sua marca no topo.</p>
-            <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="btn-primary" style="padding: 18px 45px; font-size: 1rem;">Quero um Projeto Exclusivo</a>
+            <a href="https://wa.me/5527999639610?text=Olá,%20quero%20saber%20mais%20sobre%20como%20funciona." class="btn-primary" style="padding: 18px 45px; font-size: 1rem;" target="_blank" rel="noopener">Quero um Projeto Exclusivo</a>
         </div>
     </section>
 
@@ -210,11 +377,13 @@
     </div>
 
     <section class="about" id="sobre">
-        <div class="container about-grid">
-            <div class="about-text" data-aos="fade-right">
-                <h2 style="color: var(--tajo-cyan); font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px;">Autoridade Digital</h2>
-                <h3>Por que escolher a TAJO Digital 3F?</h3>
-                <p>Não somos apenas desenvolvedores. Somos estrategistas focados em transformar a identidade visual da sua empresa em um ativo lucrativo.</p>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 style="color: var(--tajo-cyan); font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px;">Autoridade Digital</h2>
+                    <h3>Por que escolher a TAJO Digital 3F?</h3>
+                    <p>Não somos apenas desenvolvedores. Somos estrategistas focados em transformar a identidade visual da sua empresa em um ativo lucrativo.</p>
+                </div>
             </div>
             
             <div class="pillars-grid" data-aos="fade-left">
@@ -222,107 +391,4 @@
                     <h4>🔥 FOCO</h4>
                     <p>Concentração total na jornada do seu cliente para maximizar a conversão.</p>
                 </div>
-                <div class="pillar-card">
-                    <h4>💪 FORÇA</h4>
-                    <p>Tecnologia robusta e segura para aguentar o crescimento do seu negócio.</p>
-                </div>
-                <div class="pillar-card">
-                    <h4>🙏 FÉ</h4>
-                    <p>Crença na inovação e no potencial ilimitado do seu posicionamento online.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="metodologia">
-        <div class="container" data-aos="fade-up">
-            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
-                <h2>Processo <span class="highlight">Interativo</span></h2>
-                <p>Como transformamos sua ideia em uma realidade digital lucrativa.</p>
-            </div>
-
-            <div class="methodology-tabs">
-                <div class="tabs-nav">
-                    <button class="tab-btn active" onclick="openTab(event, 'step1')">1</button>
-                    <button class="tab-btn" onclick="openTab(event, 'step2')">2</button>
-                    <button class="tab-btn" onclick="openTab(event, 'step3')">3</button>
-                </div>
-
-                <div id="step1" class="tab-content active">
-                    <h3>01. Diagnóstico Digital</h3>
-                    <p>Analisamos seu mercado e concorrentes para definir os objetivos comerciais, identificando exatamente onde sua marca precisa estar para dominar o nicho.</p>
-                </div>
-
-                <div id="step2" class="tab-content">
-                    <h3>02. Planejamento Visual</h3>
-                    <p>Criamos a arquitetura do site e o design UX/UI, focando na facilidade de uso e na estética premium que gera desejo imediato de compra.</p>
-                </div>
-
-                <div id="step3" class="tab-content">
-                    <h3>03. Execução e Escala</h3>
-                    <p>Implementamos tecnologias de ponta e lançamos sua plataforma preparada para escala e captação de leads qualificados diariamente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq" id="faq">
-        <div class="container" data-aos="fade-up">
-            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
-                <h2>Dúvidas <span class="highlight">Frequentes</span></h2>
-            </div>
-            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">Quanto tempo leva para criar um site? <span>+</span></div>
-                    <div class="faq-answer">O prazo médio varia de 15 a 30 dias úteis, garantindo qualidade máxima em cada detalhe.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">O site terá suporte após a entrega? <span>+</span></div>
-                    <div class="faq-answer">Com certeza. Oferecemos suporte contínuo para atualizações, segurança e melhorias de performance.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
-                <div>
-                    <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO Digital 3F" class="logo-img" style="margin-bottom: 20px;">
-                    <p style="color: var(--text-muted);">Transformando negócios comuns em referências digitais de luxo e alta performance.</p>
-                </div>
-                <div>
-                    <h4 style="margin-bottom: 20px;">Contato Direto</h4>
-                    <p style="color: var(--text-muted);">WhatsApp: (27) 99963-9610</p>
-                    <p style="color: var(--text-muted);">Email: contato@tajodigital.com</p>
-                </div>
-            </div>
-            <div style="text-align: center; border-top: 1px solid var(--border-color); padding-top: 30px; font-size: 0.8rem; color: #444;">
-                <p>&copy; 2026 TAJO Digital 3F | Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-
-        function openTab(evt, tabName) {
-            var i, tabContent, tabBtns;
-            tabContent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabContent.length; i++) { tabContent[i].style.display = "none"; tabContent[i].classList.remove("active"); }
-            tabBtns = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tabBtns.length; i++) { tabBtns[i].classList.remove("active"); }
-            document.getElementById(tabName).style.display = "block";
-            setTimeout(() => { document.getElementById(tabName).classList.add("active"); }, 50);
-            evt.currentTarget.classList.add("active");
-        }
-
-        function toggleFaq(element) {
-            element.classList.toggle("active");
-            const span = element.querySelector('.faq-question span');
-            span.innerText = element.classList.contains("active") ? "-" : "+";
-        }
-    </script>
-</body>
-</html>
+                <div
