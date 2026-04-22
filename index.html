@@ -3,61 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAJO Digital 3F | Web & Marketing Especializado</title>
+    <title>TAJO Digital 3F | Ecossistemas de Alta Performance</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Estilos adicionais para as novas seções solicitadas */
-        .faq-section { padding: 100px 0; background: #050505; }
-        .faq-container { max-width: 800px; margin: 0 auto; }
-        .faq-item { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border-color); 
-            padding: 25px; 
-            border-radius: 15px; 
-            margin-bottom: 15px; 
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        .faq-item:hover { border-color: var(--tajo-cyan); }
-        .faq-item h5 { color: #fff; margin-bottom: 10px; display: flex; justify-content: space-between; }
-        .faq-answer { color: var(--text-muted); font-size: 0.95rem; display: none; padding-top: 10px; border-top: 1px solid var(--border-color); }
-        .faq-item.active .faq-answer { display: block; }
-
-        .testimonials-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
-            margin-top: 50px; 
-        }
-
-        /* Estilo para o iframe de mockup */
-        .showcase-box {
-            display: flex;
-            background: #0A0A0E;
-            border-radius: 30px;
-            overflow: hidden;
-            margin-top: 80px;
-            border: 1px solid var(--border-color);
-        }
-        .showcase-content { padding: 50px; flex: 1; }
-        .showcase-mockup { flex: 1; background: #000; height: 400px; position: relative; }
-        .showcase-mockup iframe { width: 100%; height: 100%; border: none; }
-
-        @media (max-width: 768px) {
-            .showcase-box { flex-direction: column; }
-            .showcase-mockup { height: 300px; }
-        }
-    </style>
 </head>
-<body style="overflow: hidden;">
+<body class="loading">
 
     <div class="iphone-loader" id="loader">
         <div class="apple-logo-wrap">
-            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="Logo TAJO" class="loader-logo">
+            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO" class="loader-logo">
             <div class="progress-bar-container">
                 <div class="progress-bar"></div>
             </div>
@@ -66,28 +22,28 @@
 
     <header>
         <div class="container nav-container">
-            <a href="#inicio">
+            <a href="#inicio" class="logo-link">
                 <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO Digital 3F" class="logo-img">
             </a>
             <nav>
                 <a href="#inicio">Início</a>
-                <a href="#sobre">Quem Somos</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#depoimentos">Depoimentos</a>
+                <a href="#sobre">Nossa Essência</a>
+                <a href="#portfolio">Portfólio de Elite</a>
+                <a href="#depoimentos">Parceiros</a>
                 <a href="#faq">Dúvidas</a>
             </nav>
-            <a href="https://wa.me/5527999639610" class="btn-primary" target="_blank">Consultoria Grátis</a>
+            <a href="https://wa.me/5527999639610" class="btn-primary" target="_blank">Consultoria Estratégica</a>
         </div>
     </header>
 
     <section class="hero" id="inicio">
         <div class="container" data-aos="fade-up">
-            <span class="badge" style="margin-bottom: 20px; display: inline-block;">Marketing & Web Intelligence</span>
+            <span class="badge">Marketing & Web Intelligence</span>
             <h1>Liderando a Nova Era da <span class="highlight">Autoridade Digital.</span></h1>
-            <p>Construímos ecossistemas digitais de alta performance para empresas que não aceitam o comum. Tecnologia robusta e design de luxo para escalar sua operação.</p>
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <a href="https://wa.me/5527999639610" class="btn-primary" style="padding: 20px 40px;">Iniciar um Projeto</a>
-                <a href="#portfolio" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 10px; font-size: 0.8rem; text-transform: uppercase;">Ver Casos de Sucesso <span style="font-size: 1.2rem;">↓</span></a>
+            <p>Construímos ecossistemas digitais de alta performance para empresas que buscam liderança de mercado. Tecnologia robusta e design de luxo para escalar sua operação.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/5527999639610" class="btn-primary main-btn">Iniciar Projeto</a>
+                <a href="#portfolio" class="btn-secondary">Ver Casos de Sucesso <span>→</span></a>
             </div>
         </div>
     </section>
@@ -96,19 +52,19 @@
         <div class="container">
             <div class="about-grid-main">
                 <div data-aos="fade-right">
-                    <span class="badge">Nossa Essência</span>
-                    <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin: 20px 0;">Visão em <span class="highlight">Autoridade</span>.</h2>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
-                        A <strong>TAJO DIGITAL 3F</strong> nasceu para transformar marcas em potências digitais. Não entregamos apenas "sites", entregamos ativos comerciais que trabalham por você 24h por dia.
+                    <span class="badge">A Agência</span>
+                    <h2>Visão em <span class="highlight">Autoridade</span>.</h2>
+                    <p class="about-desc">
+                        A TAJO DIGITAL 3F transforma marcas em ativos comerciais inesgotáveis. Não entregamos apenas sites; desenvolvemos o motor de crescimento do seu negócio.
                     </p>
-                    <div class="mission-vision-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="mission-vision-grid">
                         <div class="mv-card">
                             <h5>🚀 Missão</h5>
-                            <p>Escalar empresas através de tecnologia e design estratégico.</p>
+                            <p>Escalar empresas através de tecnologia de ponta e design estratégico.</p>
                         </div>
                         <div class="mv-card">
                             <h5>👁️ Visão</h5>
-                            <p>Ser a maior referência em branding e performance digital do país.</p>
+                            <p>Ser a maior referência em branding e performance digital da América Latina.</p>
                         </div>
                     </div>
                 </div>
@@ -116,15 +72,24 @@
                 <div class="values-container" data-aos="fade-left">
                     <div class="value-item">
                         <div class="value-number">01</div>
-                        <div class="value-text"><h6>Excelência Visual</h6><p>Design que comunica valor imediato.</p></div>
+                        <div class="value-text">
+                            <h6>Excelência Visual</h6>
+                            <p>Design que comunica valor e sofisticação imediata.</p>
+                        </div>
                     </div>
                     <div class="value-item">
                         <div class="value-number">02</div>
-                        <div class="value-text"><h6>Código Limpo</h6><p>Sites velozes e otimizados para o Google.</p></div>
+                        <div class="value-text">
+                            <h6>Código Inteligente</h6>
+                            <p>Estrutura veloz e otimizada para domínio do Google.</p>
+                        </div>
                     </div>
                     <div class="value-item">
                         <div class="value-number">03</div>
-                        <div class="value-text"><h6>Foco em Vendas</h6><p>Estratégias voltadas para conversão real.</p></div>
+                        <div class="value-text">
+                            <h6>Foco em Conversão</h6>
+                            <p>Estratégias validadas para gerar vendas em escala.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,52 +98,59 @@
 
     <section class="portfolio-section" id="portfolio">
         <div class="container">
-            <div class="section-header" style="margin-bottom: 60px; text-align: center;">
-                <h2 style="font-size: 2.5rem;">Projetos de <span class="highlight">Elite</span></h2>
+            <div class="section-header">
+                <h2 data-aos="fade-up">Projetos de <span class="highlight">Elite</span></h2>
             </div>
 
-          <div class="portfolio-card">
-    <span class="badge">Operacional & Gestão</span>
-    <h4>Lanchonete Schwambach</h4>
-    <p>Desenvolvimento de sistema de comanda física e digital para otimização de fluxo interno.</p>
-    <ul>
-        <li>Comanda A5 Vertical Estruturada</li>
-        <li>Agilidade no lançamento de pedidos</li>
-        <li>Facilitação no fechamento de caixa</li>
-    </ul>
-    <div style="margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 20px;">
-        <small style="color: var(--tajo-cyan); font-weight: 800;">FOCO: Organização e Velocidade Operacional.</small>
-    </div>
-</div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-aos="zoom-in">
+                    <span class="badge-card">Operacional & Gestão</span>
+                    <h4>Lanchonete Schwambach</h4>
+                    <p>Desenvolvimento de sistema de comanda física e digital para otimização de fluxo interno.</p>
+                    <ul>
+                        <li>Comanda A5 Vertical Estruturada</li>
+                        <li>Agilidade no lançamento de pedidos</li>
+                        <li>Facilitação no fechamento de caixa</li>
+                    </ul>
+                    <div class="card-footer">
+                        <small>FOCO: Organização Operacional.</small>
+                    </div>
+                </div>
 
-                <div class="portfolio-card">
-                    <span class="badge">Identidade Visual</span>
+                <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="badge-card">Identidade Visual</span>
                     <h4>Eventos Premium</h4>
-                    <p>Criação de materiais publicitários para grandes eventos e redes sociais.</p>
+                    <p>Criação de materiais publicitários de alto impacto para grandes redes sociais.</p>
                     <ul>
-                        <li>Social Media de alto engajamento</li>
-                        <li>Artes para Reels e Stories dinâmicos</li>
-                        <li>Cartazes de impacto visual</li>
+                        <li>Social Media de luxo</li>
+                        <li>Artes dinâmicas para Reels</li>
+                        <li>Branding de alto engajamento</li>
                     </ul>
+                    <div class="card-footer">
+                        <small>FOCO: Percepção de Valor.</small>
+                    </div>
                 </div>
 
-                <div class="portfolio-card">
-                    <span class="badge">Web Design</span>
+                <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="badge-card">Web Design</span>
                     <h4>Portfólio Exclusivo</h4>
-                    <p>Criação de landing pages para empresários e profissionais liberais.</p>
+                    <p>Landing pages personalizadas para empresários e líderes do mercado.</p>
                     <ul>
-                        <li>Interface de luxo (UI/UX)</li>
-                        <li>Responsividade total</li>
-                        <li>SEO Avançado</li>
+                        <li>Interface UI/UX de alta fidelidade</li>
+                        <li>Responsividade Impecável</li>
+                        <li>SEO de Rankeamento Local</li>
                     </ul>
+                    <div class="card-footer">
+                        <small>FOCO: Conversão Profissional.</small>
+                    </div>
                 </div>
             </div>
 
-            <div class="showcase-box" data-aos="zoom-in">
+            <div class="showcase-box" data-aos="fade-up">
                 <div class="showcase-content">
                     <h4>Padrão de Entrega TAJO</h4>
-                    <p>Nossas interfaces são pensadas para a melhor experiência do usuário. Navegue no modelo ao lado.</p>
-                    <a href="https://tajo3f.github.io/jottape028/" target="_blank" class="btn-primary" style="margin-top: 20px;">Abrir em Nova Aba</a>
+                    <p>Interfaces pensadas para a melhor experiência do usuário. Navegue no modelo ao lado em tempo real.</p>
+                    <a href="https://tajo3f.github.io/jottape028/" target="_blank" class="btn-primary">Explorar Interface</a>
                 </div>
                 <div class="showcase-mockup">
                     <iframe src="https://tajo3f.github.io/jottape028/"></iframe>
@@ -187,28 +159,31 @@
         </div>
     </section>
 
-    <section class="portfolio-section" id="depoimentos" style="background: #030305;">
+    <section class="testimonials-section" id="depoimentos">
         <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 2.5rem;">O que dizem nossos <span class="highlight">Parceiros</span></h2>
+            <div class="section-header center">
+                <h2 data-aos="fade-up">O que dizem nossos <span class="highlight">Parceiros</span></h2>
             </div>
             
-        <div class="testimonial-card" data-aos="fade-up">
-    <p>"A nova comanda organizou toda a nossa operação. O lançamento dos pedidos ficou muito mais claro e o fechamento do caixa no fim do dia, que antes era demorado, agora é feito com total precisão e rapidez."</p>
-    <div class="author-info">
-        <div class="author-avatar">S</div>
-        <div><strong>Lanchonete Schwambach</strong><br><small>Gestão Operacional</small></div>
-    </div>
-</div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <p>"A nova comanda organizou toda a nossa operação. O lançamento dos pedidos ficou muito mais claro e o fechamento do caixa no fim do dia agora é feito com precisão."</p>
+                    <div class="author-info">
+                        <div class="author-avatar">S</div>
+                        <div><strong>Lanchonete Schwambach</strong><br><small>Gestão Operacional</small></div>
+                    </div>
+                </div>
+
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <p>"As artes para meus eventos elevaram o nível da minha marca. A percepção de valor dos clientes subiu instantaneamente."</p>
+                    <p>"As artes elevaram o nível da minha marca. A percepção de valor dos clientes subiu instantaneamente e os eventos lotaram."</p>
                     <div class="author-info">
                         <div class="author-avatar">E</div>
                         <div><strong>Produção de Eventos</strong><br><small>Marketing Visual</small></div>
                     </div>
                 </div>
+
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <p>"O site de portfólio que a TAJO fez superou todas as expectativas. Limpo, rápido e muito profissional."</p>
+                    <p>"O portfólio superou todas as expectativas. Limpo, rápido e transmite a autoridade que meu negócio precisava."</p>
                     <div class="author-info">
                         <div class="author-avatar">P</div>
                         <div><strong>Consultoria Empresarial</strong><br><small>Presença Digital</small></div>
@@ -220,62 +195,51 @@
 
     <section class="faq-section" id="faq">
         <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+            <div class="section-header center">
                 <h2>Dúvidas <span class="highlight">Frequentes</span></h2>
             </div>
-            
             <div class="faq-container">
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <h5>Quanto tempo demora para criar um site? <span>+</span></h5>
-                    <div class="faq-answer">O prazo médio para landing pages é de 7 a 15 dias úteis, dependendo da complexidade e envio do conteúdo.</div>
+                    <div class="faq-answer">Média de 7 a 15 dias úteis, dependendo da complexidade do projeto.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h5>Eu mesmo consigo alterar os preços do meu cardápio? <span>+</span></h5>
-                    <div class="faq-answer">Sim! Entregamos soluções fáceis de gerenciar ou oferecemos suporte mensal para atualizações rápidas.</div>
+                    <h5>Eu consigo alterar os preços do meu material? <span>+</span></h5>
+                    <div class="faq-answer">Sim! Entregamos soluções com painéis intuitivos ou oferecemos suporte mensal.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h5>O site já vem com anúncios no Google? <span>+</span></h5>
-                    <div class="faq-answer">Nós preparamos o site com SEO para busca orgânica. Para anúncios (Google Ads), oferecemos consultoria separada de tráfego pago.</div>
-                </div>
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h5>Vocês fazem a identidade visual completa (Logo)? <span>+</span></h5>
-                    <div class="faq-answer">Sim, trabalhamos desde a criação do conceito do logo até toda a papelaria digital e artes para redes sociais.</div>
-                </div>
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h5>O site funciona bem no celular? <span>+</span></h5>
-                    <div class="faq-answer">Com certeza. Todos os nossos projetos são "Mobile First", ou seja, otimizados primeiramente para smartphones.</div>
+                    <h5>O site funciona bem em qualquer celular? <span>+</span></h5>
+                    <div class="faq-answer">Sim, trabalhamos com Mobile First. Seu site será perfeito em iPhones e Androids.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <a href="https://wa.me/5527999639610" class="whatsapp-float" target="_blank">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
         <span>Falar com especialista</span>
     </a>
 
-    <footer style="padding: 60px 0; border-top: 1px solid var(--border-color); background: #000;">
-        <div class="container" style="text-align: center;">
-            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" height="40" style="margin-bottom: 20px;">
-            <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 TAJO Digital 3F. Todos os direitos reservados.</p>
+    <footer>
+        <div class="container">
+            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO" class="footer-logo">
+            <p>&copy; 2026 TAJO Digital 3F. Tecnologia & Inteligência Digital.</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inicializa animações
         AOS.init({ duration: 1000, once: true });
 
-        // Controle da Abertura Estilo iPhone
         window.addEventListener('load', () => {
             const loader = document.getElementById('loader');
             setTimeout(() => {
                 loader.style.opacity = '0';
                 setTimeout(() => {
                     loader.style.display = 'none';
-                    document.body.style.overflow = 'auto';
+                    document.body.classList.remove('loading');
                 }, 1000);
-            }, 2500); // Tempo da barra de progresso
+            }, 2500);
         });
     </script>
 </body>
