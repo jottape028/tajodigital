@@ -437,3 +437,47 @@ body:has(.value-item:hover) .faq-container {
     transition: all 0.4s ease;
     filter: none;
 }
+
+/* ===========================
+   LINHA AZUL NO HOVER DOS TÍTULOS DE SEÇÃO
+=========================== */
+
+/* Aplica efeito base igual ao menu */
+.section-title,
+.about-content h2,
+.portfolio-section .section-title,
+.testimonials-grid + h2 {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+/* Linha padrão escondida */
+.section-title::after,
+.about-content h2::after,
+.portfolio-section .section-title::after,
+.testimonials-section .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    height: 2px;
+    background: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan);
+    transition: width 0.4s ease;
+}
+
+/* Hover ativa a linha */
+.section-title:hover::after,
+.about-content h2:hover::after,
+.portfolio-section .section-title:hover::after,
+.testimonials-section .section-title:hover::after {
+    width: 100%;
+}
+
+/* Opcional: leve destaque no texto */
+.section-title:hover,
+.about-content h2:hover {
+    color: #fff;
+}
