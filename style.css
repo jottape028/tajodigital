@@ -79,3 +79,82 @@ nav a:hover { color: var(--cyan); }
     nav, .nav-btn { display: none; }
     .hero h1 { font-size: 2.5rem; }
 }
+
+/* --- ESTILIZAÇÃO FAQ TAJO DIGITAL --- */
+.faq-section {
+    padding: 80px 0;
+    background: #0a0a0a; /* Fundo escuro para manter o padrão luxury */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03); /* Efeito de vidro bem sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #2ecc71; /* Cor de destaque (Verde OrçaPro) */
+    transform: translateY(-2px);
+}
+
+.faq-item h5 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item h5 span {
+    color: #2ecc71;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Estado da Aba Aberta */
+.faq-item.active {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #2ecc71;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.faq-item.active h5 span {
+    transform: rotate(45deg); /* Transforma o + em x */
+    color: #ff4d4d; /* Opcional: muda a cor ao abrir */
+}
+
+.faq-answer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-top: 0;
+    transition: all 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Ajuste conforme o tamanho do texto */
+    opacity: 1;
+    margin-top: 15px;
+}
+
+/* Estilo do Rodapé para combinar */
+.main-footer {
+    background: #050505;
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
