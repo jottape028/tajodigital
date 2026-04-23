@@ -15,6 +15,92 @@
     --glass: rgba(10, 10, 15, 0.7);
 }
 
+/* --- EFEITO DE FOCO DINÂMICO (TAJO 3F) --- */
+
+/* Transição suave para os containers principais */
+.hero, .about-section, .portfolio-section, .faq-container {
+    transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===========================
+   ABOUT - MV CARDS FOCUS
+=========================== */
+.about-grid:has(.mv-card:hover) .mv-card {
+    filter: blur(4px);
+    opacity: 0.4;
+    transform: scale(0.98);
+}
+
+.about-grid .mv-card:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+    z-index: 5;
+}
+
+/* ===========================
+   PORTFOLIO (REFORÇADO)
+=========================== */
+.portfolio-grid:hover .portfolio-card {
+    filter: blur(6px);
+    opacity: 0.25;
+    transform: scale(0.92);
+}
+
+.portfolio-grid .portfolio-card:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.08) translateY(-15px);
+    z-index: 10;
+}
+
+/* ===========================
+   FAQ - INTERAÇÃO REAL
+=========================== */
+.faq-container:has(.faq-item:hover) .faq-item {
+    filter: blur(3px);
+    opacity: 0.5;
+}
+
+.faq-item:hover {
+    filter: blur(0) !important;
+    opacity: 1;
+    transform: translateX(10px);
+    border-color: var(--cyan);
+}
+
+/* ===========================
+   BOTÕES - FOCO GLOBAL
+=========================== */
+body:has(.btn-primary:hover) .hero,
+body:has(.btn-primary:hover) .about-section,
+body:has(.btn-primary:hover) .portfolio-section {
+    filter: blur(6px);
+}
+
+/* Mantém botão sempre nítido */
+.btn-primary:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 15px 30px var(--glow);
+}
+
+/* ===========================
+   FOCO EM INTERAÇÃO GERAL
+=========================== */
+body:has(.mv-card:hover) .hero,
+body:has(.portfolio-card:hover) .hero {
+    filter: blur(6px);
+}
+
+/* Garante elemento em foco SEMPRE nítido */
+.mv-card:hover,
+.portfolio-card:hover,
+.faq-item:hover,
+.btn-primary:hover {
+    filter: blur(0) !important;
+    z-index: 100;
+}
+
 /* --- RESET & ENGINE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
 html { scroll-behavior: smooth; }
