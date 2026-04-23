@@ -185,3 +185,41 @@ nav a:hover::after { width: 100%; }
     nav, .nav-btn { display: none; } /* Mobile Menu teria que ser adicionado via JS */
     .hero h1 { font-size: 3rem; }
 }
+
+/* --- EFEITO DE FOCO DINÂMICO (TAJO 3F) --- */
+
+/* Transição suave para os containers principais */
+.hero, .about-section, .portfolio-section, .faq-container {
+    transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 1. Desfoque ao interagir com Dúvidas Frequentes (FAQ) */
+.faq-container:has(.faq-item:active),
+.faq-container:has(.faq-item.active) {
+    /* O item ativo fica nítido, os outros desfocam levemente */
+}
+.faq-item.active ~ .faq-item, 
+.faq-item:not(.active) {
+    /* Opcional: desfoque interno entre itens do FAQ */
+}
+
+/* 2. Efeito Global de Foco (Projetos de Elite & Visão) 
+   Aplica desfoque ao fundo quando o botão/card é pressionado */
+body:has(.btn-primary:active) .hero,
+body:has(.btn-primary:active) .about-section,
+body:has(.mv-card:active) .about-content h2,
+body:has(.portfolio-card:active) .section-title {
+    filter: blur(8px);
+}
+
+/* Garante que o elemento clicado fique nítido (High Contrast Focus) */
+.faq-item:active, 
+.portfolio-card:active, 
+.mv-card:active,
+.btn-primary:active {
+    filter: blur(0) !important;
+    transform: scale(1.02);
+    z-index: 100;
+}
+
+
