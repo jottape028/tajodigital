@@ -1,6 +1,6 @@
 /* TAJO Digital 3F - Official Stylesheet 
-    Version: 2.3 - Future Elite Edition
-    Engenharia de Interface Avançada - Full Kinetic Blur
+    Version: 2.3 - Ultra Kinetic & High-Attention
+    Engenharia de Interface Avançada - Full Kinetic Blur + Hyper-Pulse
 */
 
 :root {
@@ -81,11 +81,8 @@ nav a:hover::after { width: 100%; }
     background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
     border: 1px solid var(--border); padding: 30px; border-radius: 24px; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
 }
-/* Efeito de Foco "Visão em Autoridade" */
 .mini-grid:hover .mv-card { filter: blur(4px); opacity: 0.4; transform: scale(0.95); }
 .mini-grid .mv-card:hover { filter: blur(0); opacity: 1; transform: scale(1.05); border-color: var(--cyan); box-shadow: 0 10px 30px rgba(0,0,0,0.6); z-index: 2; }
-
-.mv-card h5 { color: var(--cyan); font-size: 1.1rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
 .values-container { display: flex; flex-direction: column; gap: 20px; perspective: 1000px; }
 .value-item { 
@@ -93,65 +90,70 @@ nav a:hover::after { width: 100%; }
     display: flex; gap: 25px; align-items: center; transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .value-item:hover { transform: scale(1.05) rotateX(5deg); border-color: var(--cyan); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
-.value-number { font-size: 2rem; font-weight: 900; background: linear-gradient(180deg, var(--cyan), transparent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; opacity: 0.5; }
 
 /* --- PORTFOLIO: KINETIC BLUR --- */
 .portfolio-section { padding: 120px 0; position: relative; }
-.section-title { text-align: center; font-size: 3rem; font-weight: 900; margin-bottom: 60px; letter-spacing: -2px; }
-
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; transition: 0.6s; }
 .portfolio-card { 
     background: var(--card); padding: 45px 35px; border-radius: 30px; border: 1px solid var(--border);
     position: relative; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-grid:hover .portfolio-card { filter: blur(6px); opacity: 0.3; transform: scale(0.92); }
-.portfolio-grid .portfolio-card:hover { 
-    filter: blur(0); opacity: 1; transform: scale(1.08) translateY(-15px); 
-    border-color: var(--cyan); z-index: 10; box-shadow: 0 30px 60px rgba(0,0,0,0.8);
-}
-
-.badge-card { background: rgba(0, 136, 255, 0.1); color: var(--cyan); padding: 6px 14px; border-radius: 8px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; display: inline-block; }
-.portfolio-card h4 { font-size: 1.5rem; margin-bottom: 15px; }
+.portfolio-grid .portfolio-card:hover { filter: blur(0); opacity: 1; transform: scale(1.08) translateY(-15px); border-color: var(--cyan); z-index: 10; box-shadow: 0 30px 60px rgba(0,0,0,0.8); }
 
 /* --- TESTIMONIALS: FOCUS ENGINE --- */
-.testimonials-section { padding: 100px 0; }
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .testimonial-card { 
     background: rgba(255,255,255,0.02); backdrop-filter: blur(10px); 
     padding: 40px; border-radius: 30px; border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* Efeito de Foco "Parceiros" */
 .testimonials-grid:hover .testimonial-card { filter: blur(6px); opacity: 0.3; transform: scale(0.92); }
 .testimonials-grid .testimonial-card:hover { filter: blur(0); opacity: 1; transform: scale(1.08) translateY(-10px); border-color: var(--cyan); background: rgba(255, 255, 255, 0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.8); z-index: 10; }
 
-.avatar { width: 45px; height: 45px; background: var(--blue); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 900; box-shadow: 0 0 15px var(--glow); }
-
 /* --- FAQ: INTERACTIVE FOCUS --- */
-.faq-section { padding: 100px 0; }
-.faq-container { display: flex; flex-direction: column; gap: 15px; }
-.faq-item { 
-    background: rgba(255,255,255,0.02); border: 1px solid var(--border); 
-    border-radius: 20px; padding: 30px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;
-}
-/* Efeito de Foco "Dúvidas" */
 .faq-container:hover .faq-item { filter: blur(3px); opacity: 0.5; }
 .faq-container .faq-item:hover { filter: blur(0); opacity: 1; transform: translateX(15px); border-color: var(--cyan); background: rgba(0, 136, 255, 0.03); }
 .faq-item.active { filter: blur(0) !important; opacity: 1 !important; background: rgba(0, 136, 255, 0.05); border-color: var(--cyan); }
-.faq-item.active h5 span { transform: rotate(45deg); color: #fff; }
 
-.faq-item h5 { font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; }
-.faq-item h5 span { color: var(--cyan); font-size: 1.5rem; transition: 0.4s; }
-
-/* --- WHATSAPP & BUTTONS --- */
+/* --- WHATSAPP HYPER-ATTENTION (BALANÇO + PULSO) --- */
 .whatsapp-float { 
     position: fixed; bottom: 40px; right: 40px; 
     background: #001A33; color: #fff; padding: 18px 32px; 
     border-radius: 100px; text-decoration: none; font-weight: 800; 
     display: flex; align-items: center; gap: 12px; z-index: 2000;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4); transition: 0.4s; border: 1px solid var(--cyan);
+    border: 1px solid var(--cyan);
+    
+    /* Mix de Animações: Balanço e Pulso de Brilho */
+    animation: hyper-attention 3s infinite ease-in-out;
+    box-shadow: 0 0 0 0 rgba(0, 136, 255, 0.6);
 }
-.whatsapp-float:hover { transform: scale(1.1) translateY(-5px); background: var(--cyan); box-shadow: 0 0 30px var(--cyan); }
 
+.whatsapp-float:hover { 
+    transform: scale(1.1) translateY(-5px); 
+    background: var(--cyan); 
+    box-shadow: 0 0 30px var(--cyan);
+    animation-play-state: paused; /* Para o balanço ao passar o mouse */
+}
+
+@keyframes hyper-attention {
+    /* Parte 1: O Balanço (Shake) */
+    0%, 100% { transform: rotate(0) scale(1); }
+    5%, 15% { transform: rotate(-5deg) scale(1.02); }
+    10%, 20% { transform: rotate(5deg) scale(1.02); }
+    25% { transform: rotate(0) scale(1); }
+    
+    /* Parte 2: O Pulso de Brilho (Glow Pulse) */
+    50% { box-shadow: 0 0 0 20px rgba(0, 136, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 136, 255, 0); }
+}
+
+.whatsapp-float svg { animation: icon-wiggle 2s infinite linear; }
+@keyframes icon-wiggle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* --- BUTTONS & BADGES --- */
 .btn-primary { 
     background: linear-gradient(135deg, var(--blue), var(--cyan)); 
     color: #fff; padding: 14px 28px; border-radius: 14px; 
@@ -168,13 +170,14 @@ nav a:hover::after { width: 100%; }
     margin-bottom: 25px; display: inline-block;
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER & MISC --- */
 .main-footer { padding: 100px 0 50px; background: #010102; border-top: 1px solid var(--border); }
+.avatar { width: 45px; height: 45px; background: var(--blue); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 900; box-shadow: 0 0 15px var(--glow); }
 
 /* --- MOBILE --- */
 @media (max-width: 1024px) {
     .about-grid, .portfolio-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 40px; }
-    .about-grid { text-align: center; }
     nav, .nav-btn { display: none; }
     .hero h1 { font-size: 3rem; }
+    .whatsapp-float { bottom: 20px; right: 20px; padding: 15px 25px; font-size: 0.8rem; }
 }
