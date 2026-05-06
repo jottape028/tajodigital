@@ -1,250 +1,406 @@
 <!DOCTYPE html>
-<html lang="pt-BR" style="scroll-behavior: smooth;">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAJO Digital 3F | Especialista em Landing Page</title>
+    <title>TAJO Digital 3F | Elite Landing Pages & Branding</title>
     
-    <!-- Google Fonts & AOS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- SEO & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    
     <style>
-        /* --- DESIGN SYSTEM --- */
+        /* --- CORE DESIGN SYSTEM --- */
         :root {
-            --bg-dark: #050505;
-            --bg-card: rgba(255, 255, 255, 0.03);
-            --accent: #00d4ff; 
-            --accent-grad: linear-gradient(135deg, #00d4ff 0%, #0072ff 100%);
-            --text-main: #ffffff;
-            --text-dim: #a0a0a0;
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --primary: #080808;      /* Deep Onyx */
+            --secondary: #121212;    /* Card Surface */
+            --accent: #00d4ff;       /* Electric Cyan */
+            --accent-glow: rgba(0, 212, 255, 0.3);
+            --text-main: #f5f5f7;
+            --text-muted: #86868b;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
+            background-color: var(--primary);
             color: var(--text-main);
-            line-height: 1.6;
             overflow-x: hidden;
-        }
-
-        body.loading { overflow: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
-        /* --- UTILITÁRIOS --- */
-        .highlight {
-            background: var(--accent-grad);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
-
-        .badge {
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent);
-            display: inline-block;
-            margin-bottom: 20px;
+            line-height: 1.5;
         }
 
         /* --- LOADER --- */
-        .iphone-loader {
+        #loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: #000; z-index: 10000; display: flex;
-            justify-content: center; align-items: center; transition: opacity 0.8s ease;
+            background: #000; z-index: 10000; display: flex; align-items: center; justify-content: center;
         }
-        .apple-logo-wrap { text-align: center; width: 180px; }
-        .loader-logo { width: 70px; margin-bottom: 30px; filter: brightness(0) invert(1); }
-        .progress-bar-container { width: 100%; height: 2px; background: #222; border-radius: 10px; overflow: hidden; }
-        .progress-bar { width: 0%; height: 100%; background: #fff; animation: load 1.5s forwards; }
+        .loader-content { text-align: center; }
+        .loader-bar { width: 120px; height: 1px; background: #333; margin-top: 20px; position: relative; overflow: hidden; }
+        .loader-fill { position: absolute; width: 0%; height: 100%; background: var(--accent); animation: load 2s ease forwards; }
         @keyframes load { to { width: 100%; } }
 
-        /* --- HEADER --- */
-        header {
-            padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000;
-            transition: var(--transition);
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 999;
+            padding: 25px 0; transition: var(--transition-smooth);
         }
-        header.scrolled {
-            background: rgba(5, 5, 5, 0.8);
+        nav.scrolled {
+            background: rgba(8, 8, 8, 0.85);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 12px 0;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo-img { height: 40px; }
-        
-        nav a {
-            color: var(--text-main); text-decoration: none; margin: 0 15px;
-            font-size: 0.9rem; opacity: 0.7; transition: var(--transition);
+        .nav-inner {
+            max-width: 1300px; margin: 0 auto; padding: 0 40px;
+            display: flex; justify-content: space-between; align-items: center;
         }
-        nav a:hover { opacity: 1; color: var(--accent); }
+        .nav-links a {
+            color: var(--text-main); text-decoration: none; margin-left: 35px;
+            font-size: 0.85rem; font-weight: 500; opacity: 0.6; transition: 0.3s;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .nav-links a:hover { opacity: 1; color: var(--accent); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .hero-glow {
+            position: absolute; width: 500px; height: 500px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            top: 20%; filter: blur(80px); z-index: 0;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; padding: 0 20px; }
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem); font-weight: 900;
+            line-height: 0.9; letter-spacing: -4px; margin-bottom: 30px;
+        }
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.4rem); color: var(--text-muted);
+            max-width: 600px; margin: 0 auto 40px; font-weight: 300;
+        }
 
         /* --- BUTTONS --- */
-        .btn-primary {
-            background: var(--accent-grad); color: #fff; padding: 14px 28px;
-            border-radius: 10px; text-decoration: none; font-weight: 600;
-            transition: var(--transition); border: none; cursor: pointer;
-            display: inline-block;
+        .cta-main {
+            background: var(--text-main); color: var(--primary);
+            padding: 18px 45px; border-radius: 100px; font-weight: 700;
+            text-decoration: none; display: inline-block; transition: var(--transition-smooth);
+            border: 1px solid transparent;
         }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4); }
-
-        /* --- HERO --- */
-        .hero { padding: 200px 0 120px; text-align: center; }
-        .hero h1 { font-size: 4rem; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; }
-        .hero p { font-size: 1.25rem; color: var(--text-dim); max-width: 800px; margin: 0 auto 40px; }
-
-        /* --- PORTFOLIO --- */
-        .portfolio-section { padding: 100px 0; }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .portfolio-card {
-            background: var(--bg-card); border: 1px solid var(--glass-border);
-            padding: 45px; border-radius: 24px; transition: var(--transition);
+        .cta-main:hover {
+            background: transparent; color: var(--text-main);
+            border-color: var(--border); transform: scale(1.05);
         }
-        .portfolio-card:hover { border-color: var(--accent); transform: translateY(-10px); background: rgba(255, 255, 255, 0.05); }
 
-        /* --- FAQ --- */
-        .faq-item {
-            background: var(--bg-card); border: 1px solid var(--glass-border);
-            border-radius: 16px; padding: 24px; margin-bottom: 15px; cursor: pointer;
+        /* --- STATS SECTION --- */
+        .stats { padding: 100px 0; border-bottom: 1px solid var(--border); }
+        .stats-grid {
+            max-width: 1200px; margin: 0 auto; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            text-align: center; gap: 40px;
         }
-        .faq-answer { max-height: 0; overflow: hidden; transition: all 0.4s ease; color: var(--text-dim); }
-        .faq-item.active .faq-answer { max-height: 200px; margin-top: 20px; }
+        .stat-item h2 { font-size: 3rem; font-weight: 800; color: var(--accent); }
+        .stat-item p { color: var(--text-muted); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; }
+
+        /* --- SERVICES (UX IMPROVED) --- */
+        .section { padding: 160px 0; }
+        .label {
+            display: inline-block; padding: 6px 15px; border: 1px solid var(--border);
+            border-radius: 50px; font-size: 0.65rem; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--accent); margin-bottom: 25px;
+        }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px; margin-top: 60px;
+        }
+        .service-card {
+            background: var(--secondary); border: 1px solid var(--border);
+            padding: 60px; border-radius: 40px; transition: var(--transition-smooth);
+            cursor: pointer; position: relative; overflow: hidden;
+        }
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            background: #181818;
+        }
+        .service-card h3 { font-size: 1.8rem; margin-bottom: 20px; }
+        .service-card p { color: var(--text-muted); font-size: 1rem; }
+
+        /* --- METHODOLOGY (THE 3F) --- */
+        .method { background: #0c0c0c; }
+        .method-step {
+            display: flex; align-items: flex-start; gap: 40px;
+            margin-bottom: 80px; max-width: 800px;
+        }
+        .step-number {
+            font-size: 4rem; font-weight: 900; opacity: 0.1;
+            line-height: 1; min-width: 100px;
+        }
+
+        /* --- PRICING --- */
+        .pricing-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-top: 60px;
+        }
+        .price-card {
+            padding: 50px; border-radius: 30px; border: 1px solid var(--border);
+            transition: var(--transition-smooth);
+        }
+        .price-card.featured { border-color: var(--accent); background: var(--glass); }
+        .price-card h4 { font-size: 1rem; color: var(--accent); margin-bottom: 10px; }
+        .price-card .cost { font-size: 3rem; font-weight: 800; margin-bottom: 30px; }
+        .price-card ul { list-style: none; margin-bottom: 40px; color: var(--text-muted); }
+        .price-card ul li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
 
         /* --- FOOTER --- */
-        footer { padding: 60px 0; border-top: 1px solid var(--glass-border); text-align: center; }
-        .footer-logo { height: 50px; margin-bottom: 20px; }
+        footer { padding: 100px 0 50px; border-top: 1px solid var(--border); }
+        .footer-inner {
+            max-width: 1200px; margin: 0 auto; padding: 0 40px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px;
+        }
+        .footer-logo h2 { font-size: 1.5rem; letter-spacing: -1px; }
+        .footer-links h5 { margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted); }
+        .footer-links ul { list-style: none; }
+        .footer-links a { color: var(--text-main); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 10px; opacity: 0.6; }
 
         /* --- WHATSAPP --- */
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background: #25d366;
-            color: #fff; padding: 16px 28px; border-radius: 50px; display: flex;
-            align-items: center; gap: 12px; text-decoration: none; z-index: 999;
-            font-weight: 700; transition: var(--transition);
+        .wa-float {
+            position: fixed; bottom: 40px; right: 40px; z-index: 1000;
+            background: #fff; color: #000; padding: 15px 30px;
+            border-radius: 100px; text-decoration: none; font-weight: 700;
+            display: flex; align-items: center; gap: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            transition: var(--transition-smooth);
         }
+        .wa-float:hover { transform: translateY(-5px) scale(1.05); }
 
+        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            nav { display: none; }
+            .nav-inner { padding: 0 20px; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 3.5rem; }
+            .section { padding: 80px 0; }
         }
     </style>
 </head>
-
 <body class="loading">
 
-    <!-- Loader -->
-    <div class="iphone-loader" id="loader">
-        <div class="apple-logo-wrap">
-            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO" class="loader-logo">
-            <div class="progress-bar-container">
-                <div class="progress-bar"></div>
-            </div>
+    <!-- Preloader -->
+    <div id="loader">
+        <div class="loader-content">
+            <h2 style="font-weight: 900; letter-spacing: -2px;">TAJO</h2>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
         </div>
     </div>
 
-    <header id="main-header">
-        <div class="container nav-container">
-            <a href="#inicio"><img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO Digital 3F" class="logo-img"></a>
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Diferenciais</a>
-                <a href="#portfolio">Projetos</a>
-                <a href="#faq">FAQ</a>
-            </nav>
-            <a href="https://wa.me/5527999639610" class="btn-primary" target="_blank">Consultoria Grátis</a>
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" style="text-decoration: none; color: white;">
+                <h2 style="font-weight: 900; letter-spacing: -1px;">TAJO<span style="color: var(--accent);">3F</span></h2>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Serviços</a>
+                <a href="#method">Método</a>
+                <a href="#portfolio">Trabalhos</a>
+                <a href="#pricing">Planos</a>
+            </div>
+            <a href="https://wa.me/5527999639610" class="cta-main" style="padding: 10px 25px; font-size: 0.8rem;">Começar Agora</a>
         </div>
-    </header>
+    </nav>
 
-    <section class="hero" id="inicio">
-        <div class="container" data-aos="fade-up">
-            <span class="badge">Especialista em Landing Page</span>
-            <h1>Sua Marca com <br><span class="highlight">Autoridade Digital.</span></h1>
-            <p>Construímos Landing Pages de alta conversão para profissionais e empresas que buscam se destacar no mercado com design premium e tecnologia de ponta.</p>
-            <a href="https://wa.me/5527999639610" class="btn-primary">Quero minha Landing Page</a>
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content" data-aos="fade-up">
+            <span class="label">Especialista em Landing Pages de Elite</span>
+            <h1>Não é apenas um site.<br>É uma <span class="highlight">Máquina de Vendas.</span></h1>
+            <p>Transformamos sua autoridade em lucro através de design premium, código de alta performance e psicologia de conversão.</p>
+            <a href="#services" class="cta-main">Explorar Ecossistema</a>
         </div>
     </section>
 
-    <section class="portfolio-section" id="portfolio">
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item" data-aos="fade-up">
+                <h2>+150%</h2>
+                <p>Média de Conversão</p>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <h2>0.8s</h2>
+                <p>Tempo de Carregamento</p>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <h2>100%</h2>
+                <p>Design Exclusivo</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">Soluções <span class="highlight">TAJO Digital 3F</span></h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card" data-aos="fade-up">
-                    <span class="highlight">Performance</span>
-                    <h4 style="margin: 15px 0;">Landing Pages de Elite</h4>
-                    <p style="color: var(--text-dim);">Páginas focadas 100% em conversão, com carregamento ultra-rápido e design persuasivo.</p>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <span class="label">O que fazemos</span>
+                <h2 style="font-size: 3rem; font-weight: 800;">Soluções Digitais sob medida para quem <span class="highlight">não aceita o comum.</span></h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <span style="font-size: 2rem;">⚡</span>
+                    <h3>Landing Pages</h3>
+                    <p>Focadas em lançamentos, produtos perpétuos e captação de leads de alto valor.</p>
                 </div>
-                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
-                    <span class="highlight">Branding</span>
-                    <h4 style="margin: 15px 0;">Identidade Visual</h4>
-                    <p style="color: var(--text-dim);">Criação de logotipos e manuais de marca que transmitem luxo e profissionalismo.</p>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <span style="font-size: 2rem;">💎</span>
+                    <h3>Elite Branding</h3>
+                    <p>Identidade visual que impõe respeito e posiciona sua marca no topo do mercado.</p>
                 </div>
-                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-                    <span class="highlight">Estratégia</span>
-                    <h4 style="margin: 15px 0;">Sites Institucionais</h4>
-                    <p style="color: var(--text-dim);">Sua empresa com um endereço digital que impõe respeito e gera novos negócios 24h.</p>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <span style="font-size: 2rem;">🛠️</span>
+                    <h3>Sistemas Web</h3>
+                    <p>Dashboards e plataformas customizadas para organizar e escalar sua operação.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="faq-section" id="faq">
-        <div class="container" style="max-width: 800px;">
-            <h2 style="text-align: center; margin-bottom: 40px;">Dúvidas <span class="highlight">Frequentes</span></h2>
-            <div class="faq-item">
-                <h5>Por que a TAJO Digital 3F é especialista? <span>+</span></h5>
-                <div class="faq-answer">Porque unimos estratégia de vendas ao design de elite. Cada Landing Page é construída para converter visitantes em clientes reais.</div>
+    <section class="section method" id="method">
+        <div class="container">
+            <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div data-aos="fade-right">
+                    <span class="label">Metodologia 3F</span>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Como entregamos <span class="highlight">resultados reais.</span></h2>
+                    <p style="color: var(--text-muted);">Nosso processo é desenhado para remover qualquer atrito entre sua ideia e a entrega final.</p>
+                </div>
+                <div class="method-steps">
+                    <div class="method-step" data-aos="fade-left">
+                        <div class="step-number">01</div>
+                        <div>
+                            <h4>Foco Estratégico</h4>
+                            <p style="color: var(--text-muted);">Mergulhamos no seu negócio para entender seu cliente ideal.</p>
+                        </div>
+                    </div>
+                    <div class="method-step" data-aos="fade-left" data-aos-delay="100">
+                        <div class="step-number">02</div>
+                        <div>
+                            <h4>Fluxo de Design</h4>
+                            <p style="color: var(--text-muted);">Criação de interfaces imersivas focadas em experiência de usuário.</p>
+                        </div>
+                    </div>
+                    <div class="method-step" data-aos="fade-left" data-aos-delay="200">
+                        <div class="step-number">03</div>
+                        <div>
+                            <h4>Finalização Técnica</h4>
+                            <p style="color: var(--text-muted);">Otimização de código para performance ultra-rápida e SEO.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-item">
-                <h5>Qual o prazo de entrega? <span>+</span></h5>
-                <div class="faq-answer">O prazo médio é de 7 a 12 dias úteis, garantindo máxima qualidade em cada detalhe do código.</div>
+        </div>
+    </section>
+
+    <section class="section" id="pricing">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="label">Investimento</span>
+                <h2>Escolha seu nível de <span class="highlight">impacto.</span></h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card" data-aos="fade-up">
+                    <h4>Essential</h4>
+                    <div class="cost">R$ 1.5k</div>
+                    <ul>
+                        <li>✓ Landing Page Estruturada</li>
+                        <li>✓ Mobile First</li>
+                        <li>✓ Integração WhatsApp</li>
+                        <li>✓ Suporte 15 dias</li>
+                    </ul>
+                    <a href="https://wa.me/5527999639610" class="cta-main" style="width: 100%; text-align: center;">Selecionar</a>
+                </div>
+                <div class="price-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Elite Branding</h4>
+                    <div class="cost">R$ 3.5k+</div>
+                    <ul>
+                        <li>✓ Tudo do Essential</li>
+                        <li>✓ Identidade Visual Completa</li>
+                        <li>✓ Copywriting Persuasivo</li>
+                        <li>✓ Suporte Premium 30 dias</li>
+                    </ul>
+                    <a href="https://wa.me/5527999639610" class="cta-main" style="width: 100%; text-align: center; background: var(--accent);">Mais Vendido</a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <img src="https://i.postimg.cc/gkK97nKv/Chat-GPT-Image-22-de-abr-de-2026-14-02-01-removebg-preview.png" alt="TAJO Digital 3F" class="footer-logo">
-            <p>TAJO Digital 3F | Especialista em Landing Page</p>
-            <p style="color: #444; font-size: 0.8rem; margin-top: 10px;">&copy; 2026 Todos os direitos reservados.</p>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <h2>TAJO<span style="color: var(--accent);">3F</span></h2>
+                <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 15px;">A autoridade que sua marca merece.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navegação</h5>
+                <ul>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#method">Método</a></li>
+                    <li><a href="#pricing">Planos</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Contato</h5>
+                <ul>
+                    <li><a href="https://wa.me/5527999639610">WhatsApp Direct</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 60px; color: #333; font-size: 0.7rem;">
+            © 2026 TAJO DIGITAL 3F - TODOS OS DIREITOS RESERVADOS.
         </div>
     </footer>
 
-    <a href="https://wa.me/5527999639610" class="whatsapp-float" target="_blank">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
-        <span>Falar com o Especialista</span>
+    <a href="https://wa.me/5527999639610" class="wa-float" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Falar com Especialista
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // AOS Init
         AOS.init({ duration: 1000, once: true });
 
+        // Loader
         window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
             setTimeout(() => {
-                const loader = document.getElementById('loader');
                 loader.style.opacity = '0';
                 setTimeout(() => { 
-                    loader.style.display = 'none'; 
-                    document.body.classList.remove('loading'); 
+                    loader.style.display = 'none';
+                    document.body.classList.remove('loading');
                 }, 800);
-            }, 1500);
+            }, 1000);
         });
 
+        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 50) header.classList.add('scrolled');
-            else header.classList.remove('scrolled');
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
         });
 
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => item.classList.toggle('active'));
+        // Micro-interaction for Cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.background = `radial-gradient(circle at ${x}px ${y}px, #181818 0%, var(--secondary) 80%)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'var(--secondary)';
+            });
         });
     </script>
 </body>
