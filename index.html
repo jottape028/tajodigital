@@ -1,380 +1,465 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TAJO DIGITAL 3F - Especialista em Landing Pages de Alta Conversão, Sistemas de Streaming Avançados (TAJOFLIX) e Desenvolvimento Web Premium.">
+    <meta name="keywords" content="Landing Page, TAJO 3F, TAJOFLIX, Streaming, Criação de Sites, Afonso Cláudio ES, SEO 2026, Cinema em Casa">
+    <meta name="author" content="João Paulo Brandão - TAJO DIGITAL 3F">
     
-    <title>Tajo Digital 3F | A Nova Era está Chegando…</title>
-    <meta name="description" content="Estamos preparando algo gigante. A união perfeita entre tecnologia, landing pages de alta conversão e sistemas de streaming de última geração.">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Tajo Digital 3F | A Nova Era está Chegando…">
-    <meta property="og:description" content="Nosso site está em manutenção estratégica. Prepare-se para o próximo nível do mercado digital.">
+    <meta property="og:title" content="TAJO DIGITAL 3F | Elite Web & TAJOFLIX Streaming">
+    <meta property="og:description" content="Unimos tecnologia, estratégia e inovação para entregar soluções digitais modernas e entretenimento sem limites.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tajo3f.com.br">
     <meta property="og:image" content="https://i.postimg.cc/j2Fbz8mw/IMG-7565.png">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <title>TAJO DIGITAL 3F | Elite Landing Pages & TAJOFLIX Streaming</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* Variáveis de Paleta Neon Cinematográfica */
+        /* --- PALETA DE CORES NEON ULTRA-REALISTA (TAJO 3F) --- */
         :root {
             --bg-deep: #020204;
+            --surface: #07070c;
             --neon-blue: #0066ff;
-            --neon-blue-glow: rgba(0, 102, 255, 0.5);
+            --neon-blue-glow: rgba(0, 102, 255, 0.4);
             --neon-red: #ff0033;
-            --neon-red-glow: rgba(255, 0, 51, 0.5);
+            --neon-red-glow: rgba(255, 0, 51, 0.4);
             --text-pure: #ffffff;
             --text-silver: #cbd5e1;
-            --glass-card-bg: rgba(6, 6, 9, 0.85);
+            --text-dim: #71717a;
+            --border: rgba(255, 255, 255, 0.05);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* Reset de Alta Performance */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
+        /* --- RESET E GRID CIBERNÉTICO --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; }
+        @media (max-width: 768px) { html { font-size: 14px; } }
 
         body {
             background-color: var(--bg-deep);
             color: var(--text-pure);
-            font-family: 'Montserrat', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Iluminação Cyber de Fundo Assíncrona */
-        .ambient-engine {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .plasma-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(150px);
-            opacity: 0.5;
-            animation: floatGlow 10s infinite alternate ease-in-out;
-        }
-
-        .plasma-blue {
-            width: 60vw; height: 60vw;
-            background: radial-gradient(circle, var(--neon-blue) 0%, transparent 70%);
-            left: -15%; top: -10%;
-        }
-
-        .plasma-red {
-            width: 60vw; height: 60vw;
-            background: radial-gradient(circle, var(--neon-red) 0%, transparent 70%);
-            right: -15%; bottom: -10%;
-            animation-delay: -5s;
-        }
-
-        /* Linhas de Grid Cibernético Estilo Scifi */
-        .cyber-mesh {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 2;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.003) 1px, transparent 1px), 
-                linear-gradient(90deg, rgba(255,255,255,0.003) 1px, transparent 1px);
-            background-size: 45px 45px;
-            pointer-events: none;
-        }
-
-        /* Card Principal Glassmorphism Futurista com Borda de Neon */
-        .master-card {
-            position: relative;
-            z-index: 10;
-            background: var(--glass-card-bg);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            border-radius: 32px;
-            padding: 5rem 3.5rem;
-            max-width: 750px;
-            width: 92%;
-            text-align: center;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 40px 90px rgba(0, 0, 0, 0.95),
-                        inset 0 0 20px rgba(0, 102, 255, 0.05),
-                        inset 0 0 20px rgba(255, 0, 51, 0.05);
-        }
-
-        /* Efeito HUD / Laser de Escaneamento */
-        .master-card::after {
+        /* Fundo Estilo Interface Cinematográfica */
+        body::before {
             content: '';
-            position: absolute;
-            top: -50%; left: 0; width: 100%; height: 15px;
-            background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.2), rgba(255, 0, 51, 0.2), transparent);
-            animation: scanline 6s linear infinite;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.002) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(255,255,255,0.002) 1px, transparent 1px);
+            background-size: 50px 50px;
             pointer-events: none;
+            z-index: 0;
         }
 
-        /* Wrapper e Redimensionamento Perfeito da Nova Logomarca Redonda */
-        .logo-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .new-logo {
-            width: 100%;
-            max-width: clamp(160px, 24vw, 210px);
-            height: auto;
-            border-radius: 50%; /* Perfeito para o design circular da nova imagem */
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 35px rgba(0, 0, 0, 0.8),
-                        0 0 20px var(--neon-blue-glow),
-                        0 0 20px var(--neon-red-glow);
-            object-fit: cover;
-            animation: ultraFloat 5s ease-in-out infinite;
-        }
-
-        /* Badge de Status em Manutenção */
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--text-silver);
-            margin-bottom: 2rem;
-        }
-
-        .status-badge span {
-            width: 8px;
-            height: 8px;
-            background: #ff3344;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #ff3344;
-            animation: blink 1.5s infinite;
-        }
-
-        /* Tipografia de Impacto "Tajo Digital 3F" */
-        h1 {
-            font-weight: 900;
-            font-style: italic;
-            font-size: clamp(1.8rem, 5vw, 3.2rem);
-            line-height: 1.2;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-            margin-bottom: 1.5rem;
-        }
-
-        .line-white {
-            color: var(--text-pure);
-            display: block;
-            font-size: clamp(1.6rem, 4.5vw, 2.6rem);
-            font-weight: 800;
-            opacity: 0.95;
-            letter-spacing: 1px;
-            margin-bottom: 0.3rem;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-        }
-
-        .line-gradient {
-            background: linear-gradient(90deg, #0066ff 0%, #ff0033 100%);
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 10; }
+        
+        /* Gradiência de Texto Exclusiva */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--neon-blue) 0%, var(--neon-red) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: block;
         }
 
-        p.headline-sub {
-            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
-            color: var(--text-silver);
-            line-height: 1.6;
-            font-weight: 300;
-            max-width: 580px;
-            margin: 0 auto 3.5rem auto;
-            opacity: 0.75;
-        }
+        /* --- HEADER REESTRUTURADO --- */
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 20px 0; transition: var(--transition); }
+        header.scrolled { background: rgba(2, 2, 4, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 12px 0; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        
+        .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; }
+        .brand-logo img { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); }
+        .brand-logo span { color: var(--neon-red); }
 
-        /* Divisória Futurista */
-        .cyber-line {
-            height: 1px;
-            width: 100%;
-            max-width: 400px;
-            background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.4), rgba(255, 0, 51, 0.4), transparent);
-            margin: 0 auto 2.5rem auto;
-        }
+        .nav-links { display: flex; gap: 30px; }
+        @media (max-width: 900px) { .nav-links { display: none; } }
+        .nav-links a { text-decoration: none; color: var(--text-silver); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue-glow); }
 
-        /* Zona de Ação (Instagram + WhatsApp Comercial) */
-        .action-zone {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-            width: 100%;
+        /* --- HERO PRINCIPAL --- */
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 100px; position: relative; }
+        .hero::after {
+            content: ''; position: absolute; width: 45vw; height: 45vw; background: radial-gradient(circle, rgba(0,102,255,0.08) 0%, transparent 70%); top: -10%; left: -10%; pointer-events: none;
         }
+        .hero::before {
+            content: ''; position: absolute; width: 45vw; height: 45vw; background: radial-gradient(circle, rgba(255,0,51,0.08) 0%, transparent 70%); bottom: -10%; right: -10%; pointer-events: none;
+        }
+        .hero-content h1 { font-family: 'Inter', sans-serif; font-size: clamp(2.3rem, 7vw, 5.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 25px; letter-spacing: -2px; }
+        
+        /* --- BENTO GRID MIGRADO (QUEM SOMOS / O QUE FAZEMOS) --- */
+        .section-title { text-align: center; margin-bottom: 60px; font-family: 'Inter', sans-serif; }
+        .section-title h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; letter-spacing: -1px; }
+        .section-title p { color: var(--text-silver); font-size: 1.1rem; max-width: 600px; margin: 15px auto 0; opacity: 0.8; }
 
-        .btn-base {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 1.1rem 2.2rem;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            flex: 1;
-            max-width: 270px;
-            min-width: 230px;
-        }
+        .bento-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 60px 0; }
+        @media (max-width: 1024px) { .bento-container { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .bento-container { grid-template-columns: 1fr; } }
+        
+        .bento-box { background: var(--surface); border: 1px solid var(--border); padding: 45px 35px; border-radius: 24px; transition: var(--transition); position: relative; overflow: hidden; }
+        .bento-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, transparent 60%, rgba(255,255,255,0.01) 100%); pointer-events: none; }
+        .bento-box:hover { border-color: var(--neon-blue); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 66, 255, 0.1); }
+        .bento-box.center-box:hover { border-color: var(--neon-red); box-shadow: 0 15px 40px rgba(255, 0, 51, 0.1); }
+        
+        .icon-wrapper { margin-bottom: 25px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); }
+        .bento-box h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 15px; }
 
-        .btn-instagram {
-            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-            background-size: 180% auto;
-            color: var(--text-pure);
-            box-shadow: 0 10px 25px rgba(225, 48, 108, 0.25);
-        }
+        /* Lista customizada para recursos do streaming */
+        .stream-list { list-style: none; margin-top: 15px; text-align: left; }
+        .stream-list li { font-size: 0.95rem; color: var(--text-silver); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .stream-list li::before { content: '✓'; color: var(--neon-red); font-weight: bold; }
 
-        .btn-instagram:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(225, 48, 108, 0.4);
-            background-position: right center;
-        }
+        /* --- SEÇÃO TAJOFLIX DE PROMOÇÃO DE CONTEÚDO --- */
+        .tajoflix-showcase { background: linear-gradient(180deg, #020204 0%, #05050a 50%, #020204 100%); padding: 120px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .showcase-flex { display: flex; align-items: center; gap: 50px; }
+        @media (max-width: 968px) { .showcase-flex { flex-direction: column; text-align: center; } }
+        
+        .showcase-text { flex: 1; }
+        .showcase-media { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; position: relative; }
+        
+        .poster-card { background: #111; border-radius: 12px; padding-top: 145%; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); }
+        .poster-card img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .poster-card:hover img { transform: scale(1.08); }
 
-        .btn-whatsapp {
-            background: #25D366;
-            color: var(--text-pure);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
-        }
+        /* --- METODOLOGIA --- */
+        .method-row { display: flex; gap: 30px; margin-top: 60px; }
+        @media (max-width: 768px) { .method-row { flex-direction: column; } }
+        .method-step { flex: 1; padding: 40px 30px; background: var(--surface); border-radius: 20px; border-left: 3px solid var(--border); transition: var(--transition); }
+        .method-step:hover { border-left-color: var(--neon-blue); background: rgba(255,255,255,0.01); }
+        .method-num { font-size: 3.5rem; font-weight: 900; font-family: 'Inter', sans-serif; line-height: 1; opacity: 0.15; margin-bottom: 15px; display: block; color: var(--text-silver); }
 
-        .btn-whatsapp:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
-            background-color: #1ebc5a;
-        }
+        /* --- COPIAS DE CRIATIVOS E TABELA DE PREÇO (MIGRADO DO ARQUIVO DE SÉRIES) --- */
+        .price-grid { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 60px; }
+        .price-card { background: var(--surface); padding: 45px; border-radius: 28px; border: 1px solid var(--border); width: 360px; transition: var(--transition); position: relative; overflow: hidden; }
+        .price-card.featured { border-color: var(--neon-red); box-shadow: 0 20px 50px rgba(255, 0, 51, 0.1); }
+        .price-card:hover { transform: translateY(-5px); }
+        
+        .price-badge { position: absolute; top: 22px; right: -35px; background: var(--neon-red); color: #fff; padding: 6px 40px; transform: rotate(45deg); font-size: 0.65rem; font-weight: 900; letter-spacing: 1px; }
+        .price-value { font-family: 'Inter', sans-serif; font-size: 3rem; font-weight: 900; margin: 25px 0; color: #fff; }
+        .price-value span { font-size: 1rem; font-weight: 400; color: var(--text-dim); }
 
-        .btn-base svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
+        /* --- LAB TERMINAL --- */
+        .terminal { background: #040408; border: 1px solid var(--border); font-family: monospace; padding: 25px; border-radius: 16px; color: var(--neon-blue); margin-top: 40px; box-shadow: inset 0 0 20px rgba(0,0,0,0.6); line-height: 1.8; }
 
-        /* Rodapé Focado */
-        .master-footer {
-            margin-top: 4rem;
-            font-size: 0.75rem;
-            color: #3f3f46;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            border-top: 1px solid rgba(255,255,255,0.02);
-            padding-top: 1.5rem;
-        }
+        /* --- BOTÕES --- */
+        .btn { padding: 16px 36px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: var(--transition); cursor: pointer; text-align: center; }
+        .btn-blue { background: var(--neon-blue); color: #fff; box-shadow: 0 8px 24px rgba(0, 102, 255, 0.2); }
+        .btn-blue:hover { box-shadow: 0 12px 32px var(--neon-blue-glow); transform: scale(1.03); }
+        .btn-red { background: var(--neon-red); color: #fff; box-shadow: 0 8px 24px rgba(255, 0, 51, 0.2); }
+        .btn-red:hover { box-shadow: 0 12px 32px var(--neon-red-glow); transform: scale(1.03); }
+        .btn-border { border: 1px solid var(--border); color: #fff; }
+        .btn-border:hover { background: rgba(255,255,255,0.03); border-color: var(--text-silver); }
 
-        /* Keyframes */
-        @keyframes floatGlow {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(3vw, -2vh) scale(1.08); }
-        }
+        /* TESTEMUNHOS */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 60px; }
+        .testi-card { background: var(--surface); border: 1px solid var(--border); padding: 40px; border-radius: 20px; }
+        .stars { color: #ffbc00; margin-bottom: 15px; font-size: 1.1rem; }
 
-        @keyframes ultraFloat {
-            0%, 100% { 
-                transform: translateY(0); 
-                box-shadow: 0 0 35px rgba(0, 0, 0, 0.8), 0 0 15px var(--neon-blue-glow), 0 0 15px var(--neon-red-glow);
-            }
-            50% { 
-                transform: translateY(-8px); 
-                box-shadow: 0 0 45px rgba(0, 0, 0, 0.9), 0 0 25px var(--neon-red-glow), 0 0 25px var(--neon-blue-glow);
-            }
-        }
+        /* FAQ REESTRUTURADO */
+        .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; cursor: pointer; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; }
+        .faq-question span { color: var(--neon-blue); font-size: 1.3rem; transition: transform 0.3s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--text-silver); opacity: 0.7; }
+        .faq-item.active .faq-answer { max-height: 150px; margin-top: 15px; }
+        .faq-item.active .faq-question span { transform: rotate(45deg); color: var(--neon-red); }
 
-        @keyframes scanline {
-            0% { top: -20%; }
-            100% { top: 120%; }
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 1; }
-        }
-
-        /* Responsividade Extrema */
-        @media (max-width: 768px) {
-            .master-card { padding: 4rem 2rem; }
-        }
-
-        @media (max-width: 480px) {
-            .master-card { padding: 3rem 1.25rem; border-radius: 24px; }
-            .action-zone { flex-direction: column; gap: 0.8rem; }
-            .btn-base { width: 100%; max-width: 100%; }
-        }
+        /* WHATSAPP FLOAT */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; z-index: 1000; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(37,211,102,0.3); transition: var(--transition); }
+        .wa-float:hover { transform: rotate(15deg) scale(1.1); }
     </style>
 </head>
 <body>
 
-    <div class="ambient-engine">
-        <div class="plasma-orb plasma-blue"></div>
-        <div class="plasma-orb plasma-red"></div>
-    </div>
-    <div class="cyber-mesh"></div>
-
-    <main class="master-card">
-        
-        <div class="logo-container">
-            <img src="https://i.postimg.cc/j2Fbz8mw/IMG-7565.png" alt="TAJO DIGITAL 3F" class="new-logo">
-        </div>
-        
-        <div>
-            <div class="status-badge"><span></span>Página em Manutenção</div>
-        </div>
-        
-        <h1>
-            <span class="line-white">Tajo Digital 3F</span>
-            <span class="line-gradient">A Nova Era está Chegando…</span>
-        </h1>
-        
-        <div class="cyber-line"></div>
-        
-        <p class="headline-sub">
-            Estamos reestruturando nossa base tecnológica para unificar soluções em Landing Pages de Alta Conversão e Infraestrutura Avançada de Streaming. Nosso sistema volta ao ar em breve.
-        </p>
-
-        <div class="action-zone">
-            <a href="https://www.instagram.com/tajdigital3f" target="_blank" rel="noopener noreferrer" class="btn-base btn-instagram">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                </svg>
-                Instagram
+    <header id="main-header">
+        <div class="container nav-flex">
+            <a href="#" class="brand-logo">
+                <img src="https://i.postimg.cc/j2Fbz8mw/IMG-7565.png" alt="TAJO 3F Logo">
+                TAJO <span>DIGITAL 3F</span>
             </a>
+            <div class="nav-links">
+                <a href="#solucoes">O que Fazemos</a>
+                <a href="#tajoflix">TAJOFLIX</a>
+                <a href="#metodo">Metodologia</a>
+                <a href="#investimento">Planos</a>
+            </div>
+            <a href="https://wa.me/5527999639610?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20Tajo%20Digital%203F." class="btn btn-blue" style="padding: 10px 22px; font-size: 0.8rem; border-radius: 8px;">Falar com Especialista</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content" data-aos="fade-up">
+            <h1>Unimos Tecnologia, Estratégia <br><span class="gradient-text">e Inovação Real.</span></h1>
+            <p style="color: var(--text-silver); max-width: 720px; margin: 0 auto 40px; font-size: 1.2rem; opacity: 0.9;">
+                Ajudamos pessoas e negócios a entrarem de forma profissional no mundo online. Seja através de uma máquina de vendas de alta performance ou com a melhor infraestrutura de entretenimento.
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#investimento" class="btn btn-red">Ver Planos de Streaming</a>
+                <a href="https://wa.me/5527999639610" class="btn btn-border">Contratar Desenvolvimento Web</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="solucoes" style="padding: 100px 0;">
+        <div class="section-title" data-aos="fade-up">
+            <span style="color: var(--neon-blue); font-weight:700; text-transform:uppercase; font-size:0.8rem; letter-spacing: 2px;">Ecossistema Digital</span>
+            <h2>O Que Fazemos de Melhor</h2>
+            <p>Construímos plataformas robustas feitas para escalar seu faturamento e prover experiências memoráveis.</p>
+        </div>
+        
+        <div class="bento-container">
+            <div class="bento-box" data-aos="fade-up">
+                <div class="icon-wrapper" style="color: var(--neon-blue);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3>Sites Profissionais</h3>
+                <p style="color: var(--text-silver); font-size: 0.95rem;">Desenvolvemos sites modernos, ultra rápidos (carregamento em menos de 2 segundos) e estratégicos para gerar autoridade imediata, confiança e conversões.</p>
+            </div>
+            <div class="bento-box center-box" data-aos="fade-up" data-aos-delay="100" style="border-bottom-color: rgba(255, 0, 51, 0.2);">
+                <div class="icon-wrapper" style="color: var(--neon-red);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+                <h3 style="color: var(--neon-red);">Streaming TAJOFLIX</h3>
+                <p style="color: var(--text-silver); font-size: 0.95rem;">Nossa plataforma própria de entretenimento premium com transmissão estável e catálogo atualizado diariamente:</p>
+                <ul class="stream-list">
+                    <li>Canais Ao Vivo</li>
+                    <li>Mais de 10.000 Filmes</li>
+                    <li>As Séries mais famosas do mercado</li>
+                    <li>Sistema moderno e fácil de usar</li>
+                </ul>
+            </div>
+            <div class="bento-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-wrapper" style="color: var(--neon-blue);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <h3>Foco em Crescimento</h3>
+                <p style="color: var(--text-silver); font-size: 0.95rem;">Cada linha de código que escrevemos foi pensada exclusivamente para ajudar nossos clientes a crescerem estruturalmente, venderem mais e dominarem suas presenças digitais.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tajoflix-showcase" id="tajoflix">
+        <div class="container showcase-flex">
+            <div class="showcase-text" data-aos="fade-right">
+                <span style="color: var(--neon-red); font-weight:700; text-transform:uppercase; font-size:0.8rem; letter-spacing: 2px;">Seu Mundo. Sua Tela.</span>
+                <h2 style="font-size: 2.8rem; font-weight:900; margin: 15px 0 25px; line-height: 1.2;">Filmes, Séries <br>e Muito Mais!</h2>
+                <p style="color: var(--text-silver); margin-bottom: 30px; font-size: 1.1rem;">
+                    Tenha acesso imediato a mais de <b>10.000 conteúdos</b> para assistir quando quiser, onde quiser. Qualidade de som e imagem impecáveis sem travamentos.
+                </p>
+                <div style="background: rgba(0,102,255,0.05); border: 1px dashed var(--neon-blue); padding: 20px; border-radius: 12px; margin-bottom: 30px; display: inline-flex; align-items: center; gap: 15px;">
+                    <span style="font-size: 2rem;">⏱️</span>
+                    <div style="text-align: left;">
+                        <h4 style="color: var(--neon-blue); font-weight: 900;">TESTE GRÁTIS POR 3 HORAS!</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-silver);">Teste, aprove e decida mudar sua experiência de entretenimento.</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://wa.me/5527999639610?text=Olá!%20Quero%20solicitar%20o%20teste%20grátis%20de%203%20horas%20da%20Tajoflix." target="_blank" class="btn btn-red">Solicitar Teste Grátis</a>
+                </div>
+            </div>
             
-            <a href="https://wa.me/5527999639610?text=Olá!%20Acessei%20o%20site%20em%20manutenção%20e%20gostaria%20de%20falar%20com%20o%20suporte%20/%20comercial." target="_blank" rel="noopener noreferrer" class="btn-base btn-whatsapp">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.12.553 4.195 1.602 6.009L.434 23.57l5.656-1.482a11.968 11.968 0 005.94 1.583c6.647 0 12.03-5.385 12.03-12.032S18.678 0 12.03 0zm5.666 17.264c-.242.68-1.402 1.303-1.93 1.378-.516.074-1.18.23-3.79-.848-3.14-1.294-5.18-4.524-5.334-4.73-.153-.207-1.272-1.692-1.272-3.23 0-1.536.8-2.292 1.085-2.6.284-.308.62-.385.824-.385.204 0 .41.002.593.01.2.01.468-.076.732.558.263.633.9 2.195.978 2.35.077.153.128.33.026.535-.103.204-.153.33-.306.51-.153.18-.32.396-.456.54-.153.155-.316.326-.142.628.174.302.775 1.284 1.666 2.083 1.15.1.84.184 1.144.184 1.45.304.306.702.257.962-.05.26-.076 1.05-1.134 1.33-1.41.282-.284.41-.684.41-1.155 0-.472-.853-1.155-1.008-1.332-.152-.18-1.332-.18-1.85-.18-.518 0-1.36.195-1.93.874-.572.68-.572.68 0 1.36 0z"/>
-                </svg>
-                WhatsApp
-            </a>
+            <div class="showcase-media" data-aos="fade-left">
+                <div class="poster-card"><img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=400" alt="Filme 1"></div>
+                <div class="poster-card" style="transform: translateY(-20px);"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=400" alt="Filme 2"></div>
+                <div class="poster-card"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400" alt="Filme 3"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="metodo" style="padding: 100px 0;">
+        <div class="section-title">
+            <span style="color: var(--neon-blue); font-weight: 700; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px;">Workflow Tecnológico</span>
+            <h2 style="margin-top: 10px;">Como Construímos sua <b>Autoridade</b></h2>
         </div>
         
-        <footer class="master-footer">
-            <span>&copy; 2026 TAJO DIGITAL 3F. Todos os direitos reservados.</span>
-        </footer>
+        <div class="method-row">
+            <div class="method-step" data-aos="fade-up">
+                <span class="method-num">01</span>
+                <h3>Briefing & Estratégia</h3>
+                <p style="color: var(--text-silver); margin-top: 10px; font-size: 0.95rem;">Análise estruturada do seu mercado e mapeamento direto dos pontos de conversão dos seus clientes em potencial.</p>
+            </div>
+            <div class="method-step" data-aos="fade-up" data-aos-delay="100">
+                <span class="method-num">02</span>
+                <h3>Design Moderno & Copy</h3>
+                <p style="color: var(--text-silver); margin-top: 10px; font-size: 0.95rem;">Criação visual de altíssimo nível, alinhada a textos persuasivos estruturados para reter atenção e induzir ações de vendas.</p>
+            </div>
+            <div class="method-step" data-aos="fade-up" data-aos-delay="200">
+                <span class="method-num">03</span>
+                <h3>Otimização & Deploy</h3>
+                <p style="color: var(--text-silver); margin-top: 10px; font-size: 0.95rem;">Configurações técnicas avançadas de SEO 2026, compactação e otimização de velocidade para garantir indexação no topo dos buscadores.</p>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <section style="background: #000; padding: 100px 0; border-top: 1px solid var(--border);">
+        <div class="container">
+            <h2 style="font-size: 2.3rem; font-weight: 900; margin-bottom: 10px;">Tech <span class="gradient-text">Insights</span></h2>
+            <p style="color: var(--text-silver); opacity: 0.7;">Os bastidores e métricas da infraestrutura da TAJO.</p>
+            <div class="terminal" id="type-effect"></div>
+        </div>
+    </section>
 
+    <section class="container" id="investimento" style="padding: 100px 0;">
+        <div class="section-title">
+            <span style="color: var(--neon-red); font-weight:700; text-transform:uppercase; font-size:0.8rem; letter-spacing: 2px;">Escolha Seu Plano</span>
+            <h2>Qualidade, Diversão e Entretenimento Sem Limites!</h2>
+        </div>
+        
+        <div class="price-grid">
+            <div class="price-card" data-aos="fade-up">
+                <h3>Plano 2 Meses</h3>
+                <div class="price-value">R$ 55,99</div>
+                <ul style="text-align: left; color: var(--text-silver); list-style: none; margin-bottom: 35px; font-size: 0.95rem;">
+                    <li style="margin-bottom: 10px;">✓ Grade Completa de Canais</li>
+                    <li style="margin-bottom: 10px;">✓ Filmes e Séries Liberados</li>
+                    <li style="margin-bottom: 10px;">✓ Qualidade Ultra HD / 4K</li>
+                    <li style="margin-bottom: 10px;">✓ Suporte Técnico Dedicado</li>
+                </ul>
+                <a href="https://wa.me/5527999639610?text=Olá!%20Quero%20assinar%20o%20Plano%20de%202%20Meses%20da%20Tajoflix." class="btn btn-border" style="width: 100%;">Assinar 2 Meses</a>
+            </div>
+            
+            <div class="price-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="price-badge">MELHOR CUSTO-BENEFÍCIO</div>
+                <h3 style="color: var(--neon-red);">Plano 6 Meses</h3>
+                <div class="price-value" style="color: var(--neon-red);">R$ 72,99</div>
+                <ul style="text-align: left; color: var(--text-silver); list-style: none; margin-bottom: 35px; font-size: 0.95rem;">
+                    <li style="margin-bottom: 10px;">✓ Grade Completa de Canais</li>
+                    <li style="margin-bottom: 10px;">✓ Filmes e Séries Liberados</li>
+                    <li style="margin-bottom: 10px;">✓ Acesso Ultra Estável e Sem Travar</li>
+                    <li style="margin-bottom: 10px;">✓ Economia Progressiva Garantida</li>
+                </ul>
+                <a href="https://wa.me/5527999639610?text=Olá!%20Quero%20assinar%20o%20Plano%20de%206%20Meses%20da%20Tajoflix." class="btn btn-red" style="width: 100%;">Assinar 6 Meses</a>
+            </div>
+
+            <div class="price-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Plano 10 Meses</h3>
+                <div class="price-value">R$ 99,90</div>
+                <ul style="text-align: left; color: var(--text-silver); list-style: none; margin-bottom: 35px; font-size: 0.95rem;">
+                    <li style="margin-bottom: 10px;">✓ Todo o Conteúdo da Plataforma</li>
+                    <li style="margin-bottom: 10px;">✓ Acesso Master a Eventos PPV</li>
+                    <li style="margin-bottom: 10px;">✓ Período Estendido de Entretenimento</li>
+                    <li style="margin-bottom: 10px;">✓ Ativação Prioritária e Imediata</li>
+                </ul>
+                <a href="https://wa.me/5527999639610?text=Olá!%20Quero%20assinar%20o%20Plano%20de%2010%20Meses%20da%20Tajoflix." class="btn btn-border" style="width: 100%;">Assinar 10 Meses</a>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px; padding: 40px; background: rgba(255,0,51,0.02); border: 1px solid rgba(255, 0, 51, 0.15); border-radius: 20px; text-align: center;" data-aos="zoom-in">
+            <h4 style="color: var(--neon-red); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; font-weight: 900; margin-bottom: 10px;">🎯 Nossa Missão</h4>
+            <p style="color: var(--text-silver); font-size: 1.1rem; max-width: 850px; margin: 0 auto;">
+                "Levar tecnologia e entretenimento de forma simples, acessível e profissional, conectando pessoas e alavancando negócios diretamente ao ecossistema online mundial."
+            </p>
+        </div>
+    </section>
+
+    <section class="container" id="depoimentos" style="padding-bottom: 100px;">
+        <div class="section-title">
+            <span style="color: var(--neon-blue); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">Parcerias de Sucesso</span>
+            <h2>O Que Dizem Nossos Clientes</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p style="color: var(--text-silver); font-style: italic;">"O trabalho do João Paulo na TAJO DIGITAL 3F elevou meu negócio de patamar. A Landing Page é extremamente rápida e o suporte técnico é incomparável!"</p>
+                <div style="margin-top: 20px; font-weight: 700;">Marcos Oliveira <span style="font-weight: 300; font-size: 0.85rem; color: var(--text-dim); display: block;">Empresário</span></div>
+            </div>
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p style="color: var(--text-silver); font-style: italic;">"O sistema de streaming da TAJOFLIX superou todas as minhas expectativas de estabilidade. Imagem impecável e catálogo completíssimo."</p>
+                <div style="margin-top: 20px; font-weight: 700;">Ana Júlia <span style="font-weight: 300; font-size: 0.85rem; color: var(--text-dim); display: block;">Consultora Digital</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq container" id="faq" style="padding-bottom: 100px;">
+        <div class="section-title">
+            <h2>Dúvidas Frequentes</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-item">
+                <div class="faq-question">Como funciona a entrega das Landing Pages? <span>+</span></div>
+                <div class="faq-answer">Desenvolvemos de ponta a ponta: do design estratégico ao código de alta performance, incluindo as diretrizes técnicas necessárias para o SEO estrutural. Entregamos a plataforma pronta para uso em seu domínio próprio.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Posso assistir à TAJOFLIX em quais dispositivos? <span>+</span></div>
+                <div class="faq-answer">Nossa infraestrutura avançada é compatível com Smart TVs, smartphones (Android/iOS), computadores, tablets e TV Boxes. Ativação rápida através de nosso suporte comercial.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Há custos de taxas ocultas ou adicionais? <span>+</span></div>
+                <div class="faq-answer">De forma alguma. Para serviços de streaming, você paga rigorosamente o valor fixo do plano contratado. Para criação de sites, o valor cobrado refere-se ao desenvolvimento do projeto, sem mensalidades em nossa agência.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 80px 0; border-top: 1px solid var(--border); background: #010103;">
+        <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+            <div style="max-width: 400px;">
+                <a href="#" class="brand-logo" style="margin-bottom: 20px;">
+                    <img src="https://i.postimg.cc/j2Fbz8mw/IMG-7565.png" alt="TAJO 3F Logo">
+                    TAJO <span>DIGITAL 3F</span>
+                </a>
+                <p style="color: var(--text-silver); opacity: 0.7;">Transformando autoridade técnica e infraestrutura de alta conversão em soluções de impacto real e entretenimento sem limites. Sediada em Afonso Cláudio - ES.</p>
+            </div>
+            <div style="color: var(--text-silver);">
+                <h4 style="color: #fff; margin-bottom: 15px; font-size: 1.1rem;">Contato Direto</h4>
+                <p style="margin-bottom: 5px;">João Paulo Brandão</p>
+                <p style="margin-bottom: 5px; color: var(--neon-blue); font-weight: bold;">(27) 99963-9610</p>
+                <p style="opacity: 0.6;">Afonso Cláudio - ES</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 60px; color: var(--text-dim); font-size: 0.85rem;">© 2026 TAJO DIGITAL 3F. Todos os direitos reservados.</div>
+    </footer>
+
+    <a href="https://wa.me/5527999639610?text=Olá!%20Acessei%20o%20site%20e%20gostaria%20de%20falar%20com%20a%20equipe." class="wa-float" target="_blank">
+        <svg fill="#fff" width="30px" height="30px" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.261.407 2.427 1.103 3.373l-.721 2.636 2.698-.709c.905.584 1.986.927 3.151.927 3.181 0 5.767-2.586 5.767-5.767s-2.586-5.767-5.767-5.767zm4.377 8.219c-.193.543-1.121 1.053-1.547 1.096-.426.043-.836.216-2.54-.461-2.049-.815-3.344-2.894-3.447-3.03-.102-.136-.836-1.11-.836-2.122 0-1.011.528-1.507.716-1.711.188-.204.409-.255.545-.255s.273.003.393.009c.125.006.292-.047.457.346.165.393.565 1.378.614 1.479.05.1.083.217.017.35-.066.133-.1.217-.2.333-.1.117-.21.261-.3.35-.1.1-.217.21-.093.424.124.214.551.906 1.184 1.469.814.723 1.501.947 1.715 1.047.214.1.341.083.468-.066.127-.15.545-.634.691-.85.146-.216.292-.183.491-.11.199.073 1.264.596 1.483.705.219.11.365.163.418.253s.053.645-.14 1.188z"/></svg>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            header.classList.toggle('scrolled', window.scrollY > 80);
+        });
+
+        // FAQ Collapse Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Terminas Insights (Typewriter Animation Effect)
+        const target = document.getElementById('type-effect');
+        const content = [
+            "> [SYSTEM] Inicializando Protocolo TAJO 3F v2.2.6...",
+            "> [WEB] Otimização de Imagens e Assets... Concluído com 100% de compressão.",
+            "> [SEO] Mapeamento algorítmico do Google indexado para 2026.",
+            "> [TAJOFLIX] Servidores CDN de streaming em cache para baixa latência.",
+            "> [STATUS] Operação ativa. Pronto para capturar novas conexões comerciais."
+        ];
+        let line = 0;
+        function typeWriter() {
+            if (line < content.length) {
+                target.innerHTML += content[line] + "<br>";
+                line++;
+                setTimeout(typeWriter, 850);
+            }
+        }
+        const observer = new IntersectionObserver(entries => {
+            if(entries[0].isIntersecting) typeWriter();
+        }, { threshold: 0.6 });
+        observer.observe(target);
+    </script>
 </body>
 </html>
