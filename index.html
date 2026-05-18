@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Configurações Básicas e Responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO e Metatags (Streaming, Entretenimento e Conversão) -->
-    <title>A Nova Era Está Chegando | Plataforma de Entretenimento Exclusiva</title>
-    <meta name="description" content="Prepare-se para uma experiência audiovisual imersiva. A nova era do streaming e entretenimento digital está chegando. Cadastre-se para o acesso antecipado.">
-    <meta name="keywords" content="streaming, entretenimento, filmes, séries, audiovisual, web, landing pages, alta conversão, plataforma digital, inovação">
-    <meta name="author" content="Sua Produtora / Marca">
+    <title>TAJOFLIX | A Nova Era Está Chegando</title>
+    <meta name="description" content="Prepare-se para o próximo nível do entretenimento. A TAJOFLIX está voltando com uma nova fase: muito mais conteúdo, canais ao vivo, filmes e séries.">
+    <meta name="keywords" content="streaming, tajoflix, filmes, séries, canais ao vivo, esportes ao vivo, entretenimento, nova fase">
+    <meta name="author" content="TAJOFLIX">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph (Compartilhamento em Redes Sociais / WhatsApp) -->
-    <meta property="og:title" content="A Nova Era Está Chegando | O Futuro do Entretenimento">
-    <meta property="og:description" content="Nossa plataforma está passando por atualizações exclusivas. Inscreva-se para receber o aviso de lançamento.">
+    <meta property="og:title" content="TAJOFLIX | O Próximo Nível do Entretenimento">
+    <meta property="og:description" content="Algo grande está chegando. Fique ligado para a nossa nova experiência de streaming.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://i.postimg.cc/nc6wbbJ8/952C6A93-4680-469B-A248-04ED08FE26C7.png">
     
-    <!-- Fontes Premium do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:ital,wght@0,700;0,900;1,800&display=swap" rel="stylesheet">
 
     <style>
-        /* Variáveis de Tema - Estilo Premium / Streaming */
+        /* Variáveis de Paleta - Baseadas estritamente nas referências enviadas */
         :root {
-            --bg-dark: #050505;
-            --accent-glow: #e50914; /* Vermelho cinematográfico */
-            --accent-glow-secondary: #4a00e0; /* Roxo profundo para contraste */
-            --text-main: #ffffff;
-            --text-muted: #a1a1aa;
-            --glass-bg: rgba(20, 20, 25, 0.4);
-            --glass-border: rgba(255, 255, 255, 0.08);
+            --bg-pure: #020203;
+            --neon-blue: #0055ff;
+            --neon-blue-glow: rgba(0, 85, 255, 0.6);
+            --neon-red: #ff002b;
+            --neon-red-glow: rgba(255, 0, 43, 0.6);
+            --text-white: #ffffff;
+            --text-silver: #e2e8f0;
+            --text-muted: #71717a;
+            --card-bg: rgba(6, 6, 9, 0.75);
+            --border-glass: rgba(255, 255, 255, 0.05);
         }
 
-        /* Reset Global */
+        /* Reset Avançado */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            background-color: var(--bg-pure);
+            color: var(--text-white);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
             display: flex;
@@ -55,233 +55,331 @@
             position: relative;
         }
 
-        /* Efeitos de Luz Dinâmicos (Orbs Animados) */
-        .ambient-light {
+        /* Efeito Avançado de Fundo Assimétrico (Azul à Esquerda, Vermelho à Direita) */
+        .ambient-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .ambient-orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(120px);
-            z-index: 0;
-            opacity: 0.6;
-            animation: moveLights 20s infinite alternate ease-in-out;
+            filter: blur(140px);
+            opacity: 0.45;
+            mix-blend-mode: screen;
+            animation: pulseGlow 8s infinite alternate ease-in-out;
         }
 
-        .light-1 {
-            width: 40vw;
-            height: 40vw;
-            background: var(--accent-glow);
-            top: -10%;
-            left: -10%;
-            animation-delay: 0s;
+        .orb-blue {
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--neon-blue) 0%, transparent 70%);
+            left: -15%;
+            top: 15%;
         }
 
-        .light-2 {
-            width: 35vw;
-            height: 35vw;
-            background: var(--accent-glow-secondary);
-            bottom: -10%;
-            right: -10%;
-            animation-delay: -5s;
+        .orb-red {
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--neon-red) 0%, transparent 70%);
+            right: -15%;
+            bottom: 15%;
+            animation-delay: -4s;
         }
 
-        /* Container Principal (Glassmorphism) */
-        .glass-card {
+        /* Textura sutil de linhas de grid cibernético para profundidade */
+        .cyber-grid {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 2;
+            background-image: linear-gradient(rgba(255,255,255,0.005) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.005) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        /* Container Principal - Glassmorphism de Elite */
+        .main-card {
             position: relative;
             z-index: 10;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 4rem 3rem;
-            max-width: 700px;
-            width: 90%;
+            background: var(--card-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--border-glass);
+            border-radius: 28px;
+            padding: 4.5rem 3.5rem;
+            max-width: 800px;
+            width: 92%;
             text-align: center;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-            transform: translateY(0);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(0, 85, 255, 0.05), 0 0 40px rgba(255, 0, 43, 0.05);
         }
 
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 60px -12px rgba(229, 9, 20, 0.2);
+        /* Redimensionamento Inteligente e Alinhamento da Logomarca */
+        .logo-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2.5rem;
         }
 
-        /* Logomarca */
         .logo {
-            max-width: 240px;
+            width: 100%;
+            max-width: clamp(200px, 35vw, 260px); /* Ajuste dinâmico milimétrico */
             height: auto;
-            margin-bottom: 2rem;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
-            animation: subtleFloat 6s ease-in-out infinite;
+            object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.15));
+            animation: floatLogo 5s ease-in-out infinite;
         }
 
-        /* Badge de Status Premium */
-        .status-badge {
+        /* Divisória Neon Inteligente (Azul/Vermelho da Imagem 1) */
+        .neon-divider {
+            height: 2px;
+            width: 160px;
+            margin: 0 auto 2rem auto;
+            background: linear-gradient(90deg, var(--neon-blue) 0%, var(--neon-red) 100%);
+            box-shadow: 0 0 10px rgba(0, 85, 255, 0.5), 0 0 10px rgba(255, 0, 43, 0.5);
+            border-radius: 2px;
+        }
+
+        /* Badge de Status Futurista */
+        .status-tag {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background: rgba(229, 9, 20, 0.1);
-            border: 1px solid rgba(229, 9, 20, 0.3);
-            border-radius: 50px;
+            gap: 10px;
+            padding: 6px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 100px;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.75rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            color: #ff3b30;
-            margin-bottom: 2rem;
+            color: var(--text-silver);
+            margin-bottom: 1.5rem;
         }
 
-        .status-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background-color: #ff3b30;
+        .status-tag span {
+            width: 6px;
+            height: 6px;
+            background: var(--neon-red);
             border-radius: 50%;
-            box-shadow: 0 0 10px #ff3b30;
-            animation: pulseDot 2s infinite;
+            box-shadow: 0 0 8px var(--neon-red);
+            animation: blink 1.5s infinite;
         }
 
-        /* Tipografia de Alto Impacto */
+        /* Tipografia Cinematográfica Estilo "A TAJOFLIX ESTÁ DE VOLTA" */
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem); /* Tipografia fluida */
             font-weight: 900;
-            line-height: 1.1;
+            font-style: italic;
+            font-size: clamp(2.2rem, 6vw, 4.2rem);
+            line-height: 1.05;
             letter-spacing: -1px;
-            margin-bottom: 1.5rem;
             text-transform: uppercase;
-            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            margin-bottom: 1.5rem;
+        }
+
+        .text-white-glow {
+            color: var(--text-white);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--text-white) 30%, #a1a1aa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .text-neon-red {
+            color: var(--neon-red);
+            text-shadow: 0 0 20px var(--neon-red-glow);
+        }
+
         p {
-            font-size: clamp(1rem, 2vw, 1.15rem);
-            color: var(--text-muted);
-            margin-bottom: 3rem;
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            color: var(--text-silver);
+            opacity: 0.85;
+            margin-bottom: 3.5rem;
             line-height: 1.7;
             font-weight: 300;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Formulário de Captura (UX para Conversão) */
-        .notify-form {
+        /* Mini Grid de Recursos (Baseado nos ícones das fotos 2 e 3) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 3.5rem;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            padding-top: 2rem;
+        }
+
+        .feature-box {
             display: flex;
-            gap: 10px;
-            max-width: 100%;
-            margin: 0 auto 2rem auto;
-            position: relative;
-        }
-
-        .notify-input {
-            flex: 1;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--glass-border);
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .notify-input:focus {
-            border-color: rgba(229, 9, 20, 0.5);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
-        }
-
-        .notify-btn {
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            border: none;
-            background: linear-gradient(90deg, #e50914, #b20710);
-            color: white;
-            font-weight: 700;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .notify-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(229, 9, 20, 0.4);
-        }
-
-        /* Rodapé */
-        .footer {
-            margin-top: 2rem;
-            font-size: 0.85rem;
-            color: #666;
-            letter-spacing: 1px;
-            display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 8px;
         }
 
-        /* Keyframes */
-        @keyframes moveLights {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(10vw, 10vh) scale(1.2); }
-            100% { transform: translate(-10vw, -10vh) scale(0.9); }
+        .feature-box span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
         }
 
-        @keyframes subtleFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
+        .feature-box i {
+            font-size: 1.2rem;
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
         }
 
-        @keyframes pulseDot {
-            0% { opacity: 0.5; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.2); }
-            100% { opacity: 0.5; transform: scale(0.8); }
+        /* Botão Instagram Avançado (Substituindo o Mail Capture antigo) */
+        .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            max-width: 380px;
+            padding: 1.2rem 2.5rem;
+            border-radius: 16px;
+            border: none;
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            background-size: 200% auto;
+            color: var(--text-white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(225, 48, 108, 0.3);
+            transition: all 0.4s ease;
         }
 
-        /* Responsividade Extrema */
+        .instagram-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(225, 48, 108, 0.5);
+            background-position: right center;
+        }
+
+        .instagram-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Rodapé Minimalista */
+        .footer {
+            margin-top: 3.5rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            padding-top: 1.5rem;
+        }
+
+        /* Animações e Keyframes */
+        @keyframes pulseGlow {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+            100% { transform: scale(1.15) translate(3vw, -2vh); opacity: 0.55; }
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); filter: drop-shadow(0 5px 20px rgba(0, 85, 255, 0.1)); }
+            50% { transform: translateY(-10px); filter: drop-shadow(0 15px 30px rgba(255, 0, 43, 0.2)); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        /* Responsividade Total (Mobile / Tablet) */
         @media (max-width: 768px) {
-            .glass-card { padding: 3rem 2rem; }
-            .notify-form { flex-direction: column; }
-            .notify-btn { width: 100%; padding: 1.2rem; }
+            .main-card { padding: 3rem 2rem; width: 94%; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
         }
 
         @media (max-width: 480px) {
-            .glass-card { padding: 2.5rem 1.5rem; width: 95%; border-radius: 20px;}
-            .logo { max-width: 180px; }
-            .footer { flex-direction: column; gap: 5px; text-align: center; }
+            .main-card { padding: 2.5rem 1.25rem; border-radius: 20px; }
+            .logo-wrapper { margin-bottom: 2rem; }
+            p { margin-bottom: 2.5rem; }
+            .features-grid { margin-bottom: 2.5rem; }
+            .instagram-btn { padding: 1.1rem 1.5rem; font-size: 0.95rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Luzes de Fundo -->
-    <div class="ambient-light light-1"></div>
-    <div class="ambient-light light-2"></div>
+    <div class="ambient-background">
+        <div class="ambient-orb orb-blue"></div>
+        <div class="ambient-orb orb-red"></div>
+    </div>
+    <div class="cyber-grid"></div>
 
-    <!-- Interface Principal -->
-    <main class="glass-card">
+    <main class="main-card">
         
-        <img src="https://i.postimg.cc/nc6wbbJ8/952C6A93-4680-469B-A248-04ED08FE26C7.png" alt="Logomarca Oficial" class="logo">
-        
-        <div>
-            <div class="status-badge">Sistema em Atualização</div>
+        <div class="logo-wrapper">
+            <img src="https://i.postimg.cc/nc6wbbJ8/952C6A93-4680-469B-A248-04ED08FE26C7.png" alt="TAJOFLIX" class="logo">
         </div>
         
-        <h1>A Nova Era Está Chegando</h1>
-        <p>Estamos reescrevendo as regras. Nossa plataforma está passando por atualizações profundas para entregar a experiência audiovisual mais imersiva e responsiva que você já viu. O retorno será épico.</p>
+        <div>
+            <div class="status-tag"><span></span>Nova Fase</div>
+        </div>
         
-        <!-- Área de Conversão (Lead Gen) -->
-        <form class="notify-form" onsubmit="event.preventDefault(); alert('E-mail cadastrado com sucesso! Avisaremos no lançamento.');">
-            <input type="email" class="notify-input" placeholder="Insira seu melhor e-mail..." required>
-            <button type="submit" class="notify-btn">Me avise primeiro</button>
-        </form>
+        <h1 class="text-white-glow">
+            <span class="text-gradient">Algo Grande Está</span><br>
+            <span class="text-neon-red">Chegando!</span>
+        </h1>
+        
+        <div class="neon-divider"></div>
+        
+        <p>Estamos redefinindo a sua experiência digital. Nosso sistema está passando por uma evolução tecnológica absoluta para trazer mais conteúdo, canais ao vivo, filmes e séries com performance ultra avançada. Prepare-se para o próximo nível.</p>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <i>🍿</i>
+                <span>+ Conteúdo</span>
+            </div>
+            <div class="feature-box">
+                <i>⚡</i>
+                <span>+ Performance</span>
+            </div>
+            <div class="feature-box">
+                <i>🛡️</i>
+                <span>+ Segurança</span>
+            </div>
+            <div class="feature-box">
+                <i>⭐</i>
+                <span>+ Qualidade</span>
+            </div>
+        </div>
+
+        <a href="https://www.instagram.com/tajdigital3f" target="_blank" rel="noopener noreferrer" class="instagram-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            Acompanhar Novidades
+        </a>
         
         <footer class="footer">
-            <span>&copy; 2026 Todos os direitos reservados.</span>
-            <span>|</span>
-            <span>Segurança Reforçada</span>
+            <span>&copy; 2026 TAJOFLIX. Todos os direitos reservados.</span>
         </footer>
 
     </main>
