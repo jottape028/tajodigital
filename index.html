@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>TAJOFLIX | A Nova Era Está Chegando</title>
-    <meta name="description" content="Prepare-se para o próximo nível do entretenimento. A TAJOFLIX está voltando com uma nova fase: muito mais conteúdo, canais ao vivo, filmes e séries.">
-    <meta name="keywords" content="streaming, tajoflix, filmes, séries, canais ao vivo, esportes ao vivo, entretenimento, nova fase">
-    <meta name="author" content="TAJOFLIX">
+    <title>TAJO DIGITAL 3F & TAJOFLIX | O Ecossistema Digital Chegou</title>
+    <meta name="description" content="A união perfeita entre tecnologia e entretenimento. Desenvolvemos Landing Pages de alta conversão e sistemas de streaming ultra avançados. Saiba mais!">
+    <meta name="keywords" content="tajo digital 3f, tajoflix, landing pages, criar site, streaming, iptv, sistema de streaming, web design, alta conversão, tráfego pago">
+    <meta name="author" content="Tajo Digital 3F">
     <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="TAJOFLIX | O Próximo Nível do Entretenimento">
-    <meta property="og:description" content="Algo grande está chegando. Fique ligado para a nossa nova experiência de streaming.">
+    <meta property="og:title" content="TAJO DIGITAL 3F & TAJOFLIX | Uma Nova Era Tecnológica">
+    <meta property="og:description" content="Landing Pages que convertem e o sistema de streaming mais rápido do mercado agora em um só lugar.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.postimg.cc/nc6wbbJ8/952C6A93-4680-469B-A248-04ED08FE26C7.png">
+    <meta property="og:image" content="https://i.postimg.cc/rFBjK1zd/3B48653F-6EEA-472E-AE2B-D2765ED8DF59.jpg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:ital,wght@0,700;0,900;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:ital,wght@0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
 
     <style>
-        /* Variáveis de Paleta - Baseadas estritamente nas referências enviadas */
+        /* Variáveis de Paleta - Fusão Perfeita de Cores das Imagens de Referência */
         :root {
-            --bg-pure: #020203;
-            --neon-blue: #0055ff;
-            --neon-blue-glow: rgba(0, 85, 255, 0.6);
-            --neon-red: #ff002b;
-            --neon-red-glow: rgba(255, 0, 43, 0.6);
-            --text-white: #ffffff;
-            --text-silver: #e2e8f0;
-            --text-muted: #71717a;
-            --card-bg: rgba(6, 6, 9, 0.75);
-            --border-glass: rgba(255, 255, 255, 0.05);
+            --bg-deep: #020204;
+            --neon-blue: #0066ff;
+            --neon-blue-glow: rgba(0, 102, 255, 0.4);
+            --neon-red: #ff0033;
+            --neon-red-glow: rgba(255, 0, 51, 0.4);
+            --text-pure: #ffffff;
+            --text-silver: #cbd5e1;
+            --text-dark-muted: #52525b;
+            --glass-card-bg: rgba(7, 7, 11, 0.8);
+            --border-neon: rgba(255, 255, 255, 0.04);
         }
 
-        /* Reset Avançado */
+        /* Reset de Alta Performance */
         * {
             margin: 0;
             padding: 0;
@@ -44,8 +44,8 @@
         }
 
         body {
-            background-color: var(--bg-pure);
-            color: var(--text-white);
+            background-color: var(--bg-deep);
+            color: var(--text-pure);
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
             display: flex;
@@ -55,331 +55,339 @@
             position: relative;
         }
 
-        /* Efeito Avançado de Fundo Assimétrico (Azul à Esquerda, Vermelho à Direita) */
-        .ambient-background {
+        /* Iluminação de Fundo Cinemática e Assimétrica */
+        .ambient-engine {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             z-index: 1;
             pointer-events: none;
         }
 
-        .ambient-orb {
+        .plasma-orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(140px);
-            opacity: 0.45;
-            mix-blend-mode: screen;
-            animation: pulseGlow 8s infinite alternate ease-in-out;
+            filter: blur(150px);
+            opacity: 0.5;
+            animation: floatGlow 10s infinite alternate ease-in-out;
         }
 
-        .orb-blue {
-            width: 50vw;
-            height: 50vw;
+        .plasma-blue {
+            width: 60vw; height: 60vw;
             background: radial-gradient(circle, var(--neon-blue) 0%, transparent 70%);
-            left: -15%;
-            top: 15%;
+            left: -20%; top: -10%;
         }
 
-        .orb-red {
-            width: 50vw;
-            height: 50vw;
+        .plasma-red {
+            width: 60vw; height: 60vw;
             background: radial-gradient(circle, var(--neon-red) 0%, transparent 70%);
-            right: -15%;
-            bottom: 15%;
-            animation-delay: -4s;
+            right: -20%; bottom: -10%;
+            animation-delay: -5s;
         }
 
-        /* Textura sutil de linhas de grid cibernético para profundidade */
-        .cyber-grid {
+        /* Linhas de Grid Cibernético */
+        .cyber-mesh {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: 2;
-            background-image: linear-gradient(rgba(255,255,255,0.005) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.005) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.003) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(255,255,255,0.003) 1px, transparent 1px);
+            background-size: 50px 50px;
             pointer-events: none;
         }
 
-        /* Container Principal - Glassmorphism de Elite */
-        .main-card {
+        /* Card Principal Estilo Glassmorphism Futurista */
+        .master-card {
             position: relative;
             z-index: 10;
-            background: var(--card-bg);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid var(--border-glass);
-            border-radius: 28px;
+            background: var(--glass-card-bg);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid var(--border-neon);
+            border-radius: 32px;
             padding: 4.5rem 3.5rem;
-            max-width: 800px;
+            max-width: 850px;
             width: 92%;
             text-align: center;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 40px rgba(0, 85, 255, 0.05), 0 0 40px rgba(255, 0, 43, 0.05);
+            box-shadow: 0 40px 90px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 50px rgba(0, 102, 255, 0.03), 0 0 50px rgba(255, 0, 51, 0.03);
         }
 
-        /* Redimensionamento Inteligente e Alinhamento da Logomarca */
-        .logo-wrapper {
+        /* Wrapper e Redimensionamento Milimétrico da Nova Logomarca */
+        .logo-container {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
-        .logo {
+        .new-logo {
             width: 100%;
-            max-width: clamp(200px, 35vw, 260px); /* Ajuste dinâmico milimétrico */
+            max-width: clamp(160px, 25vw, 210px); /* Ajuste perfeito em qualquer tela */
             height: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.15));
-            animation: floatLogo 5s ease-in-out infinite;
+            border-radius: 24px; /* Casamento com o corte quadrado arredondado da imagem */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255,255,255,0.05);
+            object-fit: cover;
+            animation: ultraFloat 6s ease-in-out infinite;
         }
 
-        /* Divisória Neon Inteligente (Azul/Vermelho da Imagem 1) */
-        .neon-divider {
-            height: 2px;
-            width: 160px;
-            margin: 0 auto 2rem auto;
-            background: linear-gradient(90deg, var(--neon-blue) 0%, var(--neon-red) 100%);
-            box-shadow: 0 0 10px rgba(0, 85, 255, 0.5), 0 0 10px rgba(255, 0, 43, 0.5);
-            border-radius: 2px;
-        }
-
-        /* Badge de Status Futurista */
-        .status-tag {
+        /* Badge Corporativa */
+        .corporate-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 6px 18px;
-            background: rgba(255, 255, 255, 0.02);
+            padding: 8px 20px;
+            background: linear-gradient(90deg, rgba(0,102,255,0.1), rgba(255,0,33,0.1));
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 100px;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.75rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--text-silver);
-            margin-bottom: 1.5rem;
+            color: var(--text-pure);
+            margin-bottom: 2rem;
         }
 
-        .status-tag span {
-            width: 6px;
-            height: 6px;
-            background: var(--neon-red);
+        .corporate-badge span {
+            width: 8px;
+            height: 8px;
+            background: #00ff66;
             border-radius: 50%;
-            box-shadow: 0 0 8px var(--neon-red);
-            animation: blink 1.5s infinite;
+            box-shadow: 0 0 10px #00ff66;
         }
 
-        /* Tipografia Cinematográfica Estilo "A TAJOFLIX ESTÁ DE VOLTA" */
+        /* Tipografia de Altíssimo Impacto */
         h1 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
             font-style: italic;
-            font-size: clamp(2.2rem, 6vw, 4.2rem);
-            line-height: 1.05;
-            letter-spacing: -1px;
+            font-size: clamp(2rem, 5.5vw, 4rem);
+            line-height: 1.1;
             text-transform: uppercase;
+            letter-spacing: -1px;
             margin-bottom: 1.5rem;
         }
 
-        .text-white-glow {
-            color: var(--text-white);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        .line-white {
+            color: var(--text-pure);
         }
 
-        .text-gradient {
-            background: linear-gradient(135deg, var(--text-white) 30%, #a1a1aa 100%);
+        .line-gradient {
+            background: linear-gradient(90deg, #0066ff 0%, #ff0033 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 102, 255, 0.2);
         }
 
-        .text-neon-red {
-            color: var(--neon-red);
-            text-shadow: 0 0 20px var(--neon-red-glow);
-        }
-
-        p {
+        p.main-description {
             font-size: clamp(0.95rem, 2vw, 1.15rem);
             color: var(--text-silver);
-            opacity: 0.85;
-            margin-bottom: 3.5rem;
             line-height: 1.7;
             font-weight: 300;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 700px;
+            margin: 0 auto 3.5rem auto;
+            opacity: 0.9;
         }
 
-        /* Mini Grid de Recursos (Baseado nos ícones das fotos 2 e 3) */
-        .features-grid {
+        /* Pilares de Soluções Inteligentes (Gera Desejo e Prospecção do Cliente) */
+        .solutions-hub {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
             margin-bottom: 3.5rem;
-            border-top: 1px solid rgba(255,255,255,0.03);
-            padding-top: 2rem;
+            text-align: left;
         }
 
-        .feature-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
+        .solution-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
         }
 
-        .feature-box span {
+        .solution-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            transform: translateY(-3px);
+        }
+
+        .card-blue-border:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 102, 255, 0.15); }
+        .card-red-border:hover { border-color: var(--neon-red); box-shadow: 0 0 20px rgba(255, 0, 51, 0.15); }
+
+        .solution-card h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.65rem;
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .feature-box i {
-            font-size: 1.2rem;
-            filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+        .solution-card p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
         }
 
-        /* Botão Instagram Avançado (Substituindo o Mail Capture antigo) */
-        .instagram-btn {
+        /* Zona de Conversão Dupla (Instagram + WhatsApp Comercial) */
+        .action-zone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .btn-base {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
-            width: 100%;
-            max-width: 380px;
-            padding: 1.2rem 2.5rem;
-            border-radius: 16px;
-            border: none;
-            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-            background-size: 200% auto;
-            color: var(--text-white);
+            gap: 12px;
+            padding: 1.1rem 2rem;
+            border-radius: 14px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: 1px;
+            font-size: 0.95rem;
             text-transform: uppercase;
             text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(225, 48, 108, 0.3);
-            transition: all 0.4s ease;
         }
 
-        .instagram-btn:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(225, 48, 108, 0.5);
+        .btn-instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            background-size: 180% auto;
+            color: var(--text-pure);
+            box-shadow: 0 10px 25px rgba(225, 48, 108, 0.25);
+            flex: 1;
+            max-width: 280px;
+            min-width: 240px;
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(225, 48, 108, 0.4);
             background-position: right center;
         }
 
-        .instagram-btn svg {
-            width: 24px;
-            height: 24px;
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--text-pure);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
+            flex: 1;
+            max-width: 280px;
+            min-width: 240px;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+            background-color: #1ebc5a;
+        }
+
+        .btn-base svg {
+            width: 22px;
+            height: 22px;
             fill: currentColor;
         }
 
-        /* Rodapé Minimalista */
-        .footer {
-            margin-top: 3.5rem;
+        /* Rodapé Tecnológico */
+        .master-footer {
+            margin-top: 4rem;
             font-size: 0.75rem;
-            color: var(--text-muted);
-            letter-spacing: 1px;
+            color: var(--text-dark-muted);
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            border-top: 1px solid rgba(255,255,255,0.03);
+            border-top: 1px solid rgba(255,255,255,0.02);
             padding-top: 1.5rem;
         }
 
-        /* Animações e Keyframes */
-        @keyframes pulseGlow {
-            0% { transform: scale(1) translate(0, 0); opacity: 0.35; }
-            100% { transform: scale(1.15) translate(3vw, -2vh); opacity: 0.55; }
+        /* Keyframes */
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(4vw, -3vh) scale(1.1); }
         }
 
-        @keyframes floatLogo {
-            0%, 100% { transform: translateY(0); filter: drop-shadow(0 5px 20px rgba(0, 85, 255, 0.1)); }
-            50% { transform: translateY(-10px); filter: drop-shadow(0 15px 30px rgba(255, 0, 43, 0.2)); }
+        @keyframes ultraFloat {
+            0%, 100% { transform: translateY(0); filter: drop-shadow(0 5px 20px rgba(0, 102, 255, 0.15)); }
+            50% { transform: translateY(-8px); filter: drop-shadow(0 15px 35px rgba(255, 0, 51, 0.25)); }
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 1; }
-        }
-
-        /* Responsividade Total (Mobile / Tablet) */
+        /* Responsividade Extrema */
         @media (max-width: 768px) {
-            .main-card { padding: 3rem 2rem; width: 94%; }
-            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .master-card { padding: 3rem 2rem; }
+            .solutions-hub { grid-template-columns: 1fr; gap: 1rem; }
         }
 
         @media (max-width: 480px) {
-            .main-card { padding: 2.5rem 1.25rem; border-radius: 20px; }
-            .logo-wrapper { margin-bottom: 2rem; }
-            p { margin-bottom: 2.5rem; }
-            .features-grid { margin-bottom: 2.5rem; }
-            .instagram-btn { padding: 1.1rem 1.5rem; font-size: 0.95rem; }
+            .master-card { padding: 2.5rem 1.25rem; border-radius: 24px; }
+            .action-zone { flex-direction: column; gap: 0.8rem; }
+            .btn-base { width: 100%; max-width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-background">
-        <div class="ambient-orb orb-blue"></div>
-        <div class="ambient-orb orb-red"></div>
+    <div class="ambient-engine">
+        <div class="plasma-orb plasma-blue"></div>
+        <div class="plasma-orb plasma-red"></div>
     </div>
-    <div class="cyber-grid"></div>
+    <div class="cyber-mesh"></div>
 
-    <main class="main-card">
+    <main class="master-card">
         
-        <div class="logo-wrapper">
-            <img src="https://i.postimg.cc/nc6wbbJ8/952C6A93-4680-469B-A248-04ED08FE26C7.png" alt="TAJOFLIX" class="logo">
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/rFBjK1zd/3B48653F-6EEA-472E-AE2B-D2765ED8DF59.jpg" alt="TAJO DIGITAL 3F" class="new-logo">
         </div>
         
         <div>
-            <div class="status-tag"><span></span>Nova Fase</div>
+            <div class="corporate-badge"><span></span>Fusão Oficial</div>
         </div>
         
-        <h1 class="text-white-glow">
-            <span class="text-gradient">Algo Grande Está</span><br>
-            <span class="text-neon-red">Chegando!</span>
+        <h1>
+            <span class="line-white">Um Novo Ecossistema</span><br>
+            <span class="line-gradient">Está Sendo Criado</span>
         </h1>
         
-        <div class="neon-divider"></div>
+        <p class="main-description">
+            A <strong>TajoFlix</strong> e a <strong>Tajo Digital 3F</strong> agora são uma só engrenagem. Estamos unificando o desenvolvimento de Landing Pages de conversão brutal e infraestruturas de Streaming ultra-rápidas em um único lugar. Nossa plataforma está se transformando para entregar a maior evolução da internet.
+        </p>
         
-        <p>Estamos redefinindo a sua experiência digital. Nosso sistema está passando por uma evolução tecnológica absoluta para trazer mais conteúdo, canais ao vivo, filmes e séries com performance ultra avançada. Prepare-se para o próximo nível.</p>
-        
-        <div class="features-grid">
-            <div class="feature-box">
-                <i>🍿</i>
-                <span>+ Conteúdo</span>
+        <div class="solutions-hub">
+            <div class="solution-card card-blue-border">
+                <h3 style="color: var(--neon-blue);">💻 Web & Landing Pages</h3>
+                <p>Criamos páginas focadas em crescimento, tráfego pago e escala de vendas com conversões acima da média de mercado.</p>
             </div>
-            <div class="feature-box">
-                <i>⚡</i>
-                <span>+ Performance</span>
-            </div>
-            <div class="feature-box">
-                <i>🛡️</i>
-                <span>+ Segurança</span>
-            </div>
-            <div class="feature-box">
-                <i>⭐</i>
-                <span>+ Qualidade</span>
+            <div class="solution-card card-red-border">
+                <h3 style="color: var(--neon-red);">📺 Ultra Streaming</h3>
+                <p>Desenvolvimento e fornecimento de sistemas audiovisuais fluidos, estáveis e com o máximo de entretenimento.</p>
             </div>
         </div>
 
-        <a href="https://www.instagram.com/tajdigital3f" target="_blank" rel="noopener noreferrer" class="instagram-btn">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
-            Acompanhar Novidades
-        </a>
+        <div class="action-zone">
+            <a href="https://www.instagram.com/tajdigital3f" target="_blank" rel="noopener noreferrer" class="btn-base btn-instagram">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+                Instagram Oficial
+            </a>
+            
+            <a href="https://wa.me/5527999639610?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orçamento%20de%20projeto%20/%20sistema." target="_blank" rel="noopener noreferrer" class="btn-base btn-whatsapp">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.12.553 4.195 1.602 6.009L.434 23.57l5.656-1.482a11.968 11.968 0 005.94 1.583c6.647 0 12.03-5.385 12.03-12.032S18.678 0 12.03 0zm5.666 17.264c-.242.68-1.402 1.303-1.93 1.378-.516.074-1.18.23-3.79-.848-3.14-1.294-5.18-4.524-5.334-4.73-.153-.207-1.272-1.692-1.272-3.23 0-1.536.8-2.292 1.085-2.6.284-.308.62-.385.824-.385.204 0 .41.002.593.01.2.01.468-.076.732.558.263.633.9 2.195.978 2.35.077.153.128.33.026.535-.103.204-.153.33-.306.51-.153.18-.32.396-.456.54-.153.155-.316.326-.142.628.174.302.775 1.284 1.666 2.083 1.15.1.84.184 1.144.184 1.45.304.306.702.257.962-.05.26-.076 1.05-1.134 1.33-1.41.282-.284.41-.684.41-1.155 0-.472-.853-1.155-1.008-1.332-.152-.18-1.332-.18-1.85-.18-.518 0-1.36.195-1.93.874-.572.68-.572.68 0 1.36 0z"/>
+                </svg>
+                Solicitar Orçamento
+            </a>
+        </div>
         
-        <footer class="footer">
-            <span>&copy; 2026 TAJOFLIX. Todos os direitos reservados.</span>
+        <footer class="master-footer">
+            <span>&copy; 2026 TAJO DIGITAL 3F. Foco em crescimento e conversão.</span>
         </footer>
 
     </main>
